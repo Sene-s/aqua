@@ -1,0 +1,1009 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>AquaCampus</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#00616f", "on-background": "#0b1c30", "on-primary-fixed-variant": "#004d62", "on-surface": "#0b1c30", "inverse-primary": "#81d1f0", "tertiary-fixed": "#ffddb8", "surface-container-lowest": "#ffffff", "on-primary-container": "#d3f1ff", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001f29", "primary-fixed": "#b9eaff", "on-secondary-fixed": "#001f25", "primary-fixed-dim": "#81d1f0", "secondary-fixed": "#a2eeff", "on-error-container": "#93000a", "on-secondary": "#ffffff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb95f", "surface": "#f8f9ff", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "background": "#f8f9ff", "surface-tint": "#006781", "primary": "#005a71", "on-secondary-fixed-variant": "#004e5a", "tertiary": "#764900", "surface-container": "#e5eeff", "on-surface-variant": "#3f484c", "surface-variant": "#d3e4fe", "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-tertiary-container": "#ffe9d4", "on-error": "#ffffff", "outline": "#6f787d", "secondary-fixed-dim": "#2fd9f4", "secondary-container": "#3fe1fd", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "error-container": "#ffdad6", "primary-container": "#0e7490", "tertiary-container": "#965f00", "secondary": "#006877", "inverse-surface": "#213145", "outline-variant": "#bec8cd", "inverse-on-surface": "#eaf1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "2rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem" }, fontFamily: { "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><img alt="AquaCampus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VWze7kse1KdD10OFhgWx1STg0acrW8rDb2hqMXfPLwsJbXFjs5CI3sWfhklr0niaL1naZ6IBq6VqiMdeZN797qZR2fTHHUxi3wFCownPX9Hq1z81sP74aViXWw50ZzX8XzDhSK0U1nAWTt_Wp5g9SrxLjmRjhTY0UYZBrHHupoEPuoB9eFh5uU_BJ9WoW8xYrMIfOtyYhjPVz6QximAXBDxycucuW1R-Dy-EYRX7dwtUBUDEc4kvRKcA"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">AquaCampus</span><span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">~1,270 occupants</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">Campus water management platform</span></div></div><div class="flex items-center gap-4 lg:gap-6"><nav class="hidden md:flex items-center p-1 rounded-lg bg-surface-container-low" data-active-classes="bg-primary text-on-primary font-bold rounded-lg shadow-sm"><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#overview">Overview</a><a aria-current="page" class="px-3 py-1.5 transition-colors bg-primary text-on-primary font-bold rounded-lg shadow-sm" data-path="zones-and-buildings" href="#zones">Zones &amp; Buildings</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="conservation" href="#conservation">Conservation</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="telemetry-and-architecture" href="#telemetry">Telemetry &amp; Architecture</a></nav><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span class="">Typical Campus Day</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8">
+<!-- Top Context & Spatial Header -->
+<div class="relative bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 -bottom-20 w-64 h-64 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-primary/10 text-primary uppercase tracking-wider">
+              Facility Telemetry &amp; Asset Directory
+            </span>
+<span class="text-label-sm font-label-sm text-outline">Updated 12m ago</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Zones &amp; Facilities Breakdown
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Granular baseline modeling, occupancy distribution, fixture density, and hydraulic consumption classification for all 7 primary campus assets.
+          </p>
+</div>
+<!-- System Summary Stat Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full lg:w-auto">
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Total Facilities</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">7 Assets</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">domain</span> 100% telemetry
+            </span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Combined Area</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">42,500 m²</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">square_foot</span> Built + grounds
+            </span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Tracked Fixtures</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">342 Units</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">water_drop</span> Flow calibrated
+            </span>
+</div>
+<div class="p-3.5 rounded-lg bg-error-container/40 flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-error font-semibold">Priority Zone</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-error-container mt-0.5 truncate">Student Hostels</span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> 38.4% total draw
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Facility Filter Bar -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0" id="filter-pill-container">
+<button class="filter-btn active-filter px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-primary text-on-primary transition-all whitespace-nowrap shadow-sm" onclick="filterFacilities('all')">
+          All Facilities (7)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterFacilities('high')">
+          High Consumption ≥15% (3)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterFacilities('moderate')">
+          Moderate 5–15% (2)
+        </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterFacilities('low')">
+          Low &lt;5% (2)
+        </button>
+</div>
+<!-- Search & Sort Controls -->
+<div class="flex items-center gap-3 w-full lg:w-auto">
+<div class="relative flex-1 lg:w-64">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-all" id="facility-search" oninput="searchFacilities(this.value)" placeholder="Search facility or fixture..." type="text">
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="material-symbols-outlined text-outline text-[20px] hidden sm:block">sort</span>
+<select class="bg-surface-container-low text-on-surface font-title-sm text-title-sm rounded-lg px-3 py-2 outline-none cursor-pointer" id="facility-sort" onchange="sortFacilities(this.value)">
+<option value="volume">Sort: Litres / Day (High → Low)</option>
+<option value="percentage">Sort: % Campus Share</option>
+<option value="per-capita">Sort: Per-Capita Draw</option>
+<option value="name">Sort: Building Name</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Active High-Priority Deep-Dive Inspector (Hostel Focus as Specified) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
+<div class="flex flex-col xl:flex-row gap-8 items-stretch">
+<!-- Left: Diagnostics Overview -->
+<div class="xl:w-5/12 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                  Critical Focus #1
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> Live Baseline Sensor Active
+                </span>
+</div>
+<span class="font-label-md text-label-md text-primary bg-primary/10 px-2.5 py-1 rounded-md">Sector A-North</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+              Student Residential Halls (Hostels)
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Primary campus hydraulic sink. Extreme diurnality driven by synchronized morning personal hygiene routines and unmetered, gravity-fed communal washrooms.
+            </p>
+<!-- Metrics Quad -->
+<div class="grid grid-cols-2 gap-3 mt-6">
+<div class="bg-surface-container-low p-3.5 rounded-lg">
+<div class="font-label-sm text-label-sm uppercase text-outline">Nominal Daily Draw</div>
+<div class="font-headline-sm text-headline-sm font-bold text-error mt-0.5">18,500 L<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-error mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 38.4% campus load
+                </div>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg">
+<div class="font-label-sm text-label-sm uppercase text-outline">Per-Capita Metric</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">29.8 L<span class="text-body-sm font-normal text-on-surface-variant">/resident</span></div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">620 Full-time residents</div>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg">
+<div class="font-label-sm text-label-sm uppercase text-outline">Fixture Inefficiency</div>
+<div class="font-headline-sm text-headline-sm font-bold text-tertiary-container mt-0.5">11.4 L<span class="text-body-sm font-normal text-on-surface-variant">/min avg</span></div>
+<div class="font-label-sm text-label-sm text-error mt-1">+62.8% above 7 L standard</div>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-lg">
+<div class="font-label-sm text-label-sm uppercase text-outline">Est. Leaking / Overrun</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">~3,400 L<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-secondary mt-1">Recoverable via aerators</div>
+</div>
+</div>
+</div>
+<div class="pt-6 mt-6 flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm transition-colors" href="#conservation">
+<span class="">View Conservation Actions for Hostel</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center justify-center gap-1.5 transition-colors" onclick="alert('Telemetry diagnostic report generated for Building: Student Residential Halls.')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="">Export Audit Sheet</span>
+</button>
+</div>
+</div>
+<!-- Right: Diurnal Curve & Fixture Distribution Chart -->
+<div class="xl:w-7/12 flex flex-col gap-6 bg-surface-container-low p-5 sm:p-6 rounded-xl">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-title-md text-title-md text-on-surface font-bold">Hostel 24-Hour Diurnal Demand Profile</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Continuous flow telemetry sampled at 15-minute intervals across 4 blocks</div>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="">Observed Flow</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-outline border-dashed"></span>
+<span class="">Benchmark Peak Threshold (1,200 L/h)</span>
+</div>
+</div>
+</div>
+<!-- Synthetic Vector Chart of Diurnal Curve -->
+<div class="relative w-full h-48 bg-surface-container-lowest rounded-lg p-3 flex flex-col justify-between">
+<div class="absolute inset-x-8 top-12 h-[1px] bg-outline-variant/50 border-t border-dashed"></div>
+<div class="absolute right-4 top-10 font-label-sm text-label-sm text-outline">Peak Alert: 1,980 L/h</div>
+<!-- SVG Curve -->
+<svg class="w-full h-36" fill="none" preserveAspectRatio="none" viewBox="0 0 600 140">
+<defs>
+<linearGradient id="hostelGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0E7490" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#0E7490" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Filled Area -->
+<path d="M 0 120 
+                       L 50 125 
+                       L 100 122 
+                       L 130 90 
+                       L 160 15 
+                       L 190 20 
+                       L 220 70 
+                       L 270 95 
+                       L 330 98 
+                       L 390 92 
+                       L 440 40 
+                       L 480 30 
+                       L 520 85 
+                       L 560 110 
+                       L 600 120 
+                       L 600 140 L 0 140 Z" fill="url(#hostelGrad)"></path>
+<!-- Stroke Line -->
+<path d="M 0 120 
+                       L 50 125 
+                       L 100 122 
+                       L 130 90 
+                       L 160 15 
+                       L 190 20 
+                       L 220 70 
+                       L 270 95 
+                       L 330 98 
+                       L 390 92 
+                       L 440 40 
+                       L 480 30 
+                       L 520 85 
+                       L 560 110 
+                       L 600 120" stroke="#005a71" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<!-- Hotspot Markers for Morning & Evening Peaks -->
+<circle cx="175" cy="18" fill="#DC2626" r="4"></circle>
+<circle cx="460" cy="35" fill="#DC2626" r="4"></circle>
+</svg>
+<!-- Temporal X Axis -->
+<div class="flex justify-between items-center font-label-sm text-label-sm text-outline px-1">
+<span class="">00:00 (Base)</span>
+<span class="text-error font-semibold">07:00–09:00 (Peak AM)</span>
+<span class="">12:00</span>
+<span class="">16:00</span>
+<span class="text-error font-semibold">19:00–21:00 (Peak PM)</span>
+<span class="">23:59</span>
+</div>
+</div>
+<!-- Fixture Inventory Bar Breakdown -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-semibold">Fixture Census &amp; Discharge Composition</span>
+<span class="text-outline">Total: 305 Tracked Outlets</span>
+</div>
+<div class="w-full h-3 rounded-full overflow-hidden flex bg-surface-container">
+<div class="bg-primary h-full" style="width: 46%;" title="140 Showerheads (46%)"></div>
+<div class="bg-secondary-container h-full" style="width: 25%;" title="75 Toilets (25%)"></div>
+<div class="bg-tertiary-fixed h-full" style="width: 29%;" title="90 Sink Taps (29%)"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-1">
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<span class="truncate">140 Showers (46%)</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shrink-0"></span>
+<span class="truncate">75 Toilets (25%)</span>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed shrink-0"></span>
+<span class="truncate">90 Sinks (29%)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 7 Campus Facilities Cards Grid -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Campus Facility Directory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live metering breakdown across residential, commercial, service, academic, and recreational infrastructure.</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider" id="showing-count">Showing 7 of 7</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="facility-card-grid">
+<!-- CARD 1: Hostel -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="29.8" data-category="high" data-name="Student Residential Halls (Hostels)" data-share="38.4" data-volume="18500">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-error-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[22px]">hotel</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Student Residential Halls</h3>
+<span class="font-label-sm text-label-sm text-outline">Sector A • 4 Dorm Blocks</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-error text-on-error uppercase shrink-0">
+                Critical (38.4%)
+              </span>
+</div>
+<!-- Volume Metric Bar -->
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-error leading-tight">18,500 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Intensity</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">29.8 L / res / d</div>
+</div>
+</div>
+<!-- Proportional Share Track -->
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">38.4%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 38.4%;"></div>
+</div>
+</div>
+<!-- Key Infrastructure & Drivers -->
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Occupancy</span>
+<span class="font-medium text-on-surface">620 Residents</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">140 Showers, 75 Toilets, 90 Taps</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Morning showers, peak laundry loads</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">priority_high</span> Intervention Urgency: Extreme
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: Canteen -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="7.7" data-category="high" data-name="Campus Dining &amp; Central Canteen" data-share="20.3" data-volume="9800">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">restaurant</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Central Canteen &amp; Dining</h3>
+<span class="font-label-sm text-label-sm text-outline">Sector B • Dining Commons</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-tertiary-container text-on-tertiary uppercase shrink-0">
+                High (20.3%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-tertiary leading-tight">9,800 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Footfall Load</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">7.7 L / meal patron</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">20.3%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 20.3%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Footfall</span>
+<span class="font-medium text-on-surface">1,270 patrons daily</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">12 Commercial Sinks, 3 Dishwashers</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Pre-wash continuous rinse, grease traps</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">timer</span> Overuse Window: 12:30–14:30
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 3: Academic Washrooms -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="6.0" data-category="high" data-name="Common &amp; Academic Washrooms" data-share="15.8" data-volume="7600">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">wc</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Academic Washrooms</h3>
+<span class="font-label-sm text-label-sm text-outline">Main Quadrangles 1–4</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-tertiary-container text-on-tertiary uppercase shrink-0">
+                High (15.8%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-tertiary leading-tight">7,600 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Traffic Load</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">High Transient</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">15.8%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 15.8%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Occupancy</span>
+<span class="font-medium text-on-surface">Rotational class turnover</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">64 Flush Tanks, 52 Sink Taps</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Faulty flush sensors, running faucets</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">warning</span> Phantom Flush Loss: 14%
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 4: Science Labs -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="23.3" data-category="moderate" data-name="Science &amp; Research Laboratories" data-share="8.7" data-volume="4200">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">science</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Science Laboratories</h3>
+<span class="font-label-sm text-label-sm text-outline">Life &amp; Physical Sciences Complex</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed uppercase shrink-0">
+                Mod (8.7%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary leading-tight">4,200 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Researcher Avg</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">23.3 L / head</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">8.7%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 8.7%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Researchers</span>
+<span class="font-medium text-on-surface">180 Registered staff/students</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">28 Lab sinks, chillers, autoclaves</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Single-pass cooling &amp; glassware de-ion</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">check_circle</span> Recirculation Ready
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 5: Campus Grounds & Irrigation -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="0.32" data-category="moderate" data-name="Campus Grounds &amp; Botanical Gardens" data-share="8.1" data-volume="3900">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">yard</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Campus Grounds &amp; Garden</h3>
+<span class="font-label-sm text-label-sm text-outline">Central Arboretums &amp; Lawns</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed uppercase shrink-0">
+                Mod (8.1%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary leading-tight">3,900 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Areal Intensity</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">0.32 L / m²</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">8.1%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 8.1%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">square_foot</span> Green Area</span>
+<span class="font-medium text-on-surface">12,000 m² vegetated turf</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">18 Manual hose spigots, perimeter lines</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Midday evaporative watering schedule</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span> Irregular Weather Variance
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 6: Sports Complex -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="11.4" data-category="low" data-name="Sports Complex, Gymnasium &amp; Pool" data-share="5.2" data-volume="2500">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">fitness_center</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Sports Complex &amp; Gym</h3>
+<span class="font-label-sm text-label-sm text-outline">Athletics Hub West</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface uppercase shrink-0">
+                Low (5.2%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">2,500 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Per Athlete</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">11.4 L / user</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">5.2%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 5.2%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Active Users</span>
+<span class="font-medium text-on-surface">220 Athletes &amp; gym visitors</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">16 Shower stalls, rinse basins</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Post-practice showering surge</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">eco</span> Dual-stage fixtures installed
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- CARD 7: Library & Admin Block -->
+<div class="facility-card bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-capita="3.7" data-category="low" data-name="Central Library &amp; Administration Block" data-share="3.5" data-volume="1700">
+<div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline text-[22px]">local_library</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight">Library &amp; Admin Block</h3>
+<span class="font-label-sm text-label-sm text-outline">Main Campus Spine</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface uppercase shrink-0">
+                Low (3.5%)
+              </span>
+</div>
+<div class="mt-5 p-3 rounded-lg bg-surface-container-low flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline">Daily Flow</span>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">1,700 L/day</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline">Sedentary Load</span>
+<div class="font-title-sm text-title-sm font-semibold text-on-surface">3.7 L / person</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span class="">Total Campus Allocation</span>
+<span class="font-bold text-on-surface">3.5%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 3.5%;"></div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">group</span> Occupants</span>
+<span class="font-medium text-on-surface">450 Desk researchers &amp; staff</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">plumbing</span> Fixtures</span>
+<span class="font-medium text-on-surface">18 Toilets, 4 Hydration stations</span>
+</div>
+<div class="flex items-start justify-between text-on-surface-variant">
+<span class="flex items-center gap-1.5 shrink-0"><span class="material-symbols-outlined text-[16px] text-outline">bolt</span> Driver</span>
+<span class="font-medium text-on-surface text-right">Drinking fountains, standard handwash</span>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">verified</span> Baseline Calibrated
+            </span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center" href="#conservation">
+              Plan <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Architectural Campus Layout & Spatial Context Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Campus Facility Comparison Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Multi-criteria performance benchmark comparing flow volume, load factor, leak risk, and primary intervention scope.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-title-sm text-title-sm flex items-center gap-1.5 transition-colors" onclick="window.print()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="">Print Matrix</span>
+</button>
+</div>
+</div>
+<!-- Comparison Matrix Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Facility Name</th>
+<th class="py-3 px-3">Classification</th>
+<th class="py-3 px-3 text-right">Daily Vol (L)</th>
+<th class="py-3 px-3 text-right">% Campus Share</th>
+<th class="py-3 px-3 text-right">Per Capita / Load</th>
+<th class="py-3 px-3 text-center">Inefficiency Risk</th>
+<th class="py-3 px-4 rounded-r-lg">Target Intervention</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low" id="comparison-matrix-body">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="">Student Hostels (Dorms 1–4)</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-error text-on-error font-bold uppercase">High &gt;15%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-error">18,500 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">38.4%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">29.8 L / res</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">94 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Low-flow 6.5L aerators, shower timers &amp; gravity valve overhauls
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="">Central Dining &amp; Canteen</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-container text-on-tertiary font-bold uppercase">High &gt;15%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-tertiary">9,800 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">20.3%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">7.7 L / meal</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">78 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Pre-rinse spray triggers (1.15 gpm) &amp; sub-metered dishwashers
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="">Academic &amp; Quad Washrooms</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-container text-on-tertiary font-bold uppercase">High &gt;15%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-tertiary">7,600 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">15.8%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">Transient High</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">71 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Infrared sensor solenoid recalibration &amp; dual-flush conversions
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="">Science Laboratories</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold uppercase">Mod 5–15%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-on-surface">4,200 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">8.7%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">23.3 L / head</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">49 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Closed-loop recirculating chillers replacing tap-to-drain setups
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="">Campus Grounds &amp; Botanical Gardens</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold uppercase">Mod 5–15%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-on-surface">3,900 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">8.1%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">0.32 L / m²</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">58 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Evapotranspiration soil sensors &amp; shifting run times to 05:00 AM
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="">Sports Complex &amp; Gym</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface font-semibold uppercase">Low &lt;5%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-on-surface">2,500 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">5.2%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">11.4 L / user</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">32 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Push-button timed valve retrofits on gym rinse fixtures
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="">Library &amp; Administration</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface font-semibold uppercase">Low &lt;5%</span>
+</td>
+<td class="py-3.5 px-3 text-right font-semibold text-on-surface">1,700 L</td>
+<td class="py-3.5 px-3 text-right font-semibold">3.5%</td>
+<td class="py-3.5 px-3 text-right text-on-surface-variant">3.7 L / desk</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-outline font-label-sm text-label-sm font-semibold">18 / 100</span>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Standard preventative maintenance &amp; aerator audits
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Campus Physical Topology & Sector Spatial Context -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Spatial Aerial Anchor -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Campus Geographic Distribution Map</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spatial placement of monitored facilities and municipal intake junction feeds</p>
+</div>
+<span class="text-label-sm font-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Main Campus Quad
+          </span>
+</div>
+<div class="w-full h-72 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-4" data-location="Stanford University Main Quad, California" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUXgnkkQHJjXa4iByP_IA0JyqcWD0H0_LaKNivBMX05dBvlpecN8fDuoWBfJz8A9Z9DW8TP7ALrhsvoq7OrjZmtvP74PkafGtkYaaFP9Axx7BKxy6iUQ5YA2AO-CZIdt848uNkaXnnQL4Z0QecXQkHmL1ykNoWDxTxN1iRboRznZsWrEbO0qaMivZ5_rd1i5a8jdYPANBnvBw1NPfpj-r6e-5e0ge5I8Zow0xoSYMKwfAHj_pT1iJl')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+<div class="relative z-10 flex flex-wrap gap-2 items-center">
+<span class="px-3 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">home</span> Hostel Sector (38.4%)
+            </span>
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">restaurant</span> Canteen Wing (20.3%)
+            </span>
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">science</span> Lab Complex (8.7%)
+            </span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Primary Supply: North-East 150mm Municipal Main</span>
+<span class="text-on-surface font-semibold">Total Baseline: 48,200 L / day Campus Average</span>
+</div>
+</div>
+<!-- Quick Action / Diagnostic Guide -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_fix_high</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Target 22% Reduction Roadmap</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+            Modeling shows retrofitting just the 2 highest facilities (Hostel and Canteen) brings total campus consumption down by ~6,100 L/day.
+          </p>
+<div class="mt-4 flex flex-col gap-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Step 1: Shower Aerators</span>
+<p class="text-on-surface-variant">Swap 140 dormitory heads to 6.5 L/min flow restrictors.</p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Step 2: Canteen Pre-Rinse</span>
+<p class="text-on-surface-variant">Install trigger shut-off nozzles on dish prep lines.</p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Step 3: Grounds ET Timing</span>
+<p class="text-on-surface-variant">Automate sprinkler valves to run before 06:00 AM.</p>
+</div>
+</div>
+</div>
+</div>
+<a class="mt-6 w-full py-2.5 rounded-lg bg-secondary-container text-on-secondary-container font-title-sm text-title-sm font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity" href="#conservation">
+<span class="">Open Interactive Conservation Engine</span>
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let activeFilter = 'all';
+  let searchTerm = '';
+
+  function filterFacilities(category) {
+    activeFilter = category;
+    
+    // Update button styling
+    const buttons = document.querySelectorAll('#filter-pill-container .filter-btn');
+    buttons.forEach(btn => {
+      btn.className = 'filter-btn px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap';
+    });
+    
+    // Find clicked button
+    event.currentTarget.className = 'filter-btn active-filter px-3.5 py-1.5 rounded-full font-title-sm text-title-sm bg-primary text-on-primary transition-all whitespace-nowrap shadow-sm';
+    
+    applyFilters();
+  }
+
+  function searchFacilities(term) {
+    searchTerm = term.toLowerCase().trim();
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('#facility-card-grid .facility-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const cardName = card.getAttribute('data-name').toLowerCase();
+
+      const matchesFilter = (activeFilter === 'all') || (cardCategory === activeFilter);
+      const matchesSearch = !searchTerm || cardName.includes(searchTerm);
+
+      if (matchesFilter && matchesSearch) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const countLabel = document.getElementById('showing-count');
+    if (countLabel) {
+      countLabel.textContent = `Showing ${visibleCount} of 7`;
+    }
+  }
+
+  function sortFacilities(criteria) {
+    const grid = document.getElementById('facility-card-grid');
+    const cards = Array.from(grid.querySelectorAll('.facility-card'));
+
+    cards.sort((a, b) => {
+      if (criteria === 'volume') {
+        return parseFloat(b.getAttribute('data-volume')) - parseFloat(a.getAttribute('data-volume'));
+      } else if (criteria === 'percentage') {
+        return parseFloat(b.getAttribute('data-share')) - parseFloat(a.getAttribute('data-share'));
+      } else if (criteria === 'per-capita') {
+        return parseFloat(b.getAttribute('data-capita')) - parseFloat(a.getAttribute('data-capita'));
+      } else if (criteria === 'name') {
+        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+      }
+      return 0;
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+  }
+</script></main><footer class="w-full bg-surface-container-low py-6 mt-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><div class="text-right">AquaCampus Environmental Telemetry © 2024</div></div></footer>
+
+<script>
+(function(){
+  var m=location.pathname.indexOf('/m/')!==-1, base=m?'/m/':'/';
+  var map={overview:'',zones:'zones.html','zones-and-buildings':'zones.html',conservation:'conservation.html','conservation-analytics':'conservation.html',telemetry:'telemetry.html','telemetry-and-architecture':'telemetry.html','leak-telemetry':'telemetry.html'};
+  var hash={'#overview':'','#zones':'zones.html','#conservation':'conservation.html','#telemetry':'telemetry.html','#schemas':'telemetry.html'};
+  document.querySelectorAll('a').forEach(function(a){
+    var p=a.getAttribute('data-path'), h=a.getAttribute('href');
+    var t = (p in map)?map[p]:(h in hash?hash[h]:null);
+    if(t!==null && t!==undefined) a.setAttribute('href', base+t);
+  });
+  var h=document.querySelector('a[href="#"] img[alt*="Logo"]');
+})();
+</script>
+</body></html>

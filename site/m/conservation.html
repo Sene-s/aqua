@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#004e5a", "on-primary": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#3fe1fd", "outline-variant": "#bec8cd", "outline": "#6f787d", "primary": "#005a71", "tertiary-fixed-dim": "#ffb95f", "surface-container-lowest": "#ffffff", "surface-tint": "#006781", "background": "#f8f9ff", "error": "#ba1a1a", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001f29", "on-primary-container": "#d3f1ff", "inverse-primary": "#81d1f0", "secondary-fixed-dim": "#2fd9f4", "on-error": "#ffffff", "tertiary": "#764900", "inverse-surface": "#213145", "on-secondary-fixed": "#001f25", "on-primary-fixed-variant": "#004d62", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "tertiary-container": "#965f00", "secondary-fixed": "#a2eeff", "on-error-container": "#93000a", "on-surface": "#0b1c30", "primary-fixed": "#b9eaff", "surface-dim": "#cbdbf5", "surface-container-high": "#dce9ff", "on-secondary": "#ffffff", "primary-container": "#0e7490", "on-tertiary-container": "#ffe9d4", "on-surface-variant": "#3f484c", "secondary": "#006877", "surface-container-low": "#eff4ff", "surface-variant": "#d3e4fe", "surface-bright": "#f8f9ff", "error-container": "#ffdad6", "tertiary-fixed": "#ffddb8", "on-tertiary": "#ffffff", "primary-fixed-dim": "#81d1f0", "surface": "#f8f9ff", "on-secondary-container": "#00616f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin": "2rem", "space-xl": "2rem" }, "fontFamily": { "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[22px]">water_drop</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-none">AquaCampus</span><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">Conservation</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded-full"><span class="material-symbols-outlined text-primary text-[15px]">groups</span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-normal">~1,270</span></div><button aria-label="Menu and Profile Options" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile py-space-md gap-space-lg">
+<!-- Header Pill & Intro Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-surface-container-high text-primary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">Action Roadmap 2024-2025 • Ready for Deployment</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">
+      Campus Conservation &amp; Savings Plan
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      High-precision hydraulic telemetry retrofits engineered to systematically arrest municipal over-consumption across all 14 university sectors.
+    </p>
+</div>
+<!-- Primary Target Hero Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-secondary p-space-md text-on-primary shadow-md">
+<div class="absolute -right-6 -bottom-8 w-36 h-36 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+          Verified Campus Baseline Target
+        </span>
+<span class="font-label-sm text-label-sm text-primary-fixed bg-surface-container-lowest/15 px-2 py-0.5 rounded">Phase 1</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="font-label-md text-label-md text-on-primary-container font-medium">Target Net Elimination</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-display-lg-mobile text-display-lg-mobile tracking-tight font-bold">11,400</span>
+<span class="font-title-md text-title-md text-primary-fixed">L / day</span>
+</div>
+</div>
+<!-- Linear Gauge Progress -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-primary-container">
+<span>Target Reduction Progress</span>
+<span class="font-bold text-on-primary">24.0% Overall Drop</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest/20 overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 76%"></div>
+</div>
+<div class="flex items-center gap-1 text-on-primary-container font-label-sm text-label-sm opacity-90 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Reduces operational hydro-expenditures across peak summer intake</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2x2 Metric Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Metric 1 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-primary font-semibold">-24.0%</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">11,400 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">L/d</span></span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Daily Conservation</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">waves</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-secondary font-semibold">Annual</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">4.16 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ML</span></span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Preserved / Year</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-tertiary font-semibold">Scope 2</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">8.2 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">t</span></span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">CO2e Mitigated / Yr</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-primary font-semibold">High ROI</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">4.2 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Mo</span></span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-0.5">Capital Payback</span>
+</div>
+</div>
+</div>
+<!-- Interactive Savings Simulator Section -->
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Interactive Savings Simulator</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">Dynamic</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Toggle conservation thresholds to project economic savings and sustainability credentials.</p>
+<!-- Mobile Segmented Controller -->
+<div class="grid grid-cols-3 p-1 bg-surface-container rounded-lg gap-1 mt-1 text-center font-label-sm text-label-sm">
+<button class="py-2 rounded-md font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="sim-btn-conservative" onclick="setSimPlan('conservative')">
+        Cons. (10%)
+      </button>
+<button class="py-2 rounded-md font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all" id="sim-btn-standard" onclick="setSimPlan('standard')">
+        Standard (24%)
+      </button>
+<button class="py-2 rounded-md font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="sim-btn-aggressive" onclick="setSimPlan('aggressive')">
+        Aggr. (35%)
+      </button>
+</div>
+<!-- Simulator Dynamic Results Card -->
+<div class="flex flex-col gap-3 p-space-sm bg-surface-container-low rounded-lg mt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Projected Output</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-semibold" id="sim-status-badge">AASHE STARS Gold</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col bg-surface-container-lowest p-2.5 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Relief Volume</span>
+<span class="font-title-md text-title-md font-bold text-on-surface" id="sim-volume">11,400 L/d</span>
+<span class="font-label-sm text-label-sm text-primary" id="sim-volume-sub">Full Phase 1 target</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-2.5 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cost Avoidance</span>
+<span class="font-title-md text-title-md font-bold text-on-surface" id="sim-cost">$18,460 / yr</span>
+<span class="font-label-sm text-label-sm text-secondary" id="sim-cost-sub">Est. Utility Index</span>
+</div>
+</div>
+<!-- Sustainability Impact Badge Bar -->
+<div class="flex items-center gap-2 px-3 py-2 rounded-md bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface" id="sim-rating-desc">
+          Eligible for <strong>AASHE STARS Gold</strong> credit OP-22 (Water Consumption reduction).
+        </span>
+</div>
+</div>
+</div>
+<!-- 5 Prioritized Intervention Packages -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Intervention Packages</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 sequenced engineering retrofits</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" id="toggle-all-btn" onclick="toggleAllCards()">
+        Expand All
+      </button>
+</div>
+<!-- Package 01 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<div class="p-space-md flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low/50" onclick="toggleCard('pkg-01')">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold">Priority 01</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">savings</span>
+            4,500 L/d
+          </span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Residential Hostel Flow Optimization</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dormitories North &amp; South Halls</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="pkg-01-icon">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Body -->
+<div class="hidden px-space-md pb-space-md pt-0 flex flex-col gap-3" id="pkg-01-content">
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Aerated showerheads (6.0 L/m)</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Auto-delay push taps</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Acoustic leak sweep</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2.5 rounded-lg text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Estimated Capex</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">$3,200</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Payback Window</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">2.1 Months</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">apartment</span> 840 Student units</span>
+<span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[14px]">check_circle</span> Hardware staged</span>
+</div>
+</div>
+</div>
+<!-- Package 02 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<div class="p-space-md flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low/50" onclick="toggleCard('pkg-02')">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">Priority 02</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">savings</span>
+            2,400 L/d
+          </span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Commercial Kitchen Efficiency</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Central Dining Hall &amp; Campus Cafes</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="pkg-02-icon">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Body -->
+<div class="hidden px-space-md pb-space-md pt-0 flex flex-col gap-3" id="pkg-02-content">
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">High-velocity pre-rinse valves</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Batch soak sink protocols</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Timer solenoids</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2.5 rounded-lg text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Estimated Capex</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">$1,450</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Payback Window</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">1.8 Months</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">restaurant</span> 3 Campus hubs</span>
+<span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[14px]">schedule</span> Off-hours install</span>
+</div>
+</div>
+</div>
+<!-- Package 03 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<div class="p-space-md flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low/50" onclick="toggleCard('pkg-03')">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">Priority 03</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">savings</span>
+            2,000 L/d
+          </span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Smart Restroom Retrofits</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Main Library &amp; STEM Lecture Halls</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="pkg-03-icon">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Body -->
+<div class="hidden px-space-md pb-space-md pt-0 flex flex-col gap-3" id="pkg-03-content">
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Dual-flush valve converters (3.8/6.0 L)</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">PIR infrared sensor taps</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">0.5 GPM faucet aerators</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2.5 rounded-lg text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Estimated Capex</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">$2,100</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Payback Window</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">2.9 Months</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 04 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<div class="p-space-md flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low/50" onclick="toggleCard('pkg-04')">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">Priority 04</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">savings</span>
+            1,500 L/d
+          </span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Landscape Precision Irrigation</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Athletic Fields &amp; Botanical Quad</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="pkg-04-icon">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Body -->
+<div class="hidden px-space-md pb-space-md pt-0 flex flex-col gap-3" id="pkg-04-content">
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Sub-surface micro drip lines</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Dawn-only automated weather cycling</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Soil capacitive hygrometers</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2.5 rounded-lg text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Estimated Capex</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">$3,900</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Payback Window</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">5.4 Months</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 05 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<div class="p-space-md flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low/50" onclick="toggleCard('pkg-05')">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary font-semibold">Priority 05</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[15px]">savings</span>
+            1,000 L/d
+          </span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Specialized Facility Tuning</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bio-Research Labs &amp; Campus Gym Lockers</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="pkg-05-icon">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Body -->
+<div class="hidden px-space-md pb-space-md pt-0 flex flex-col gap-3" id="pkg-05-content">
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Closed-loop lab recirculating chillers</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Gym locker solenoid valves</span>
+<span class="font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant px-2 py-1 rounded">Autoclave condensation recuperator</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2.5 rounded-lg text-on-surface">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Estimated Capex</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">$2,800</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Payback Window</span>
+<span class="font-title-sm text-title-sm font-bold text-primary">6.1 Months</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 10-Week Implementation Roadmap (Mobile Vertical Stepper) -->
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface font-bold">10-Week Execution Timeline</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fall Semester Staging</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sequential mobilization path to ensure minimal academic interruption.</p>
+<div class="relative flex flex-col gap-4 mt-2 pl-3">
+<!-- Continuous vertical track -->
+<div class="absolute left-6 top-3 bottom-4 w-0.5 bg-surface-container-high"></div>
+<!-- Step 1 (Active) -->
+<div class="relative flex items-start gap-3">
+<div class="relative z-10 w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">
+          1
+        </div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Weeks 1 - 2</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Active Now</span>
+</div>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface mt-1">Acoustic Leak Sweep &amp; Valve Calibration</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">High-frequency ultrasonic audits in mechanical basements and main risers.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-3">
+<div class="relative z-10 w-7 h-7 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+          2
+        </div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Weeks 3 - 5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Planned</span>
+</div>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface mt-1">Hostel &amp; Dining Hall Fixture Swaps</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Staged wing-by-wing installation of 840 aerated showerheads and kitchen valves.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-3">
+<div class="relative z-10 w-7 h-7 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+          3
+        </div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Weeks 6 - 8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Planned</span>
+</div>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface mt-1">Restroom &amp; Irrigation Micro-Controllers</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sub-surface lines deployed at quad; library dual-flush solenoid commissioning.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex items-start gap-3">
+<div class="relative z-10 w-7 h-7 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+          4
+        </div>
+<div class="flex flex-col flex-1 bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant">Weeks 9 - 10</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verification</span>
+</div>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface mt-1">Telemetry Recalibration &amp; STARS Filing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Final digital twin balancing and verification report submitted to AASHE database.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Role-Based Operational Checklist -->
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Role-Based Action Checklist</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deploy accountability across teams</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</div>
+</div>
+<!-- Role Filter Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap font-semibold bg-primary text-on-primary" id="role-btn-managers" onclick="setRoleTab('managers')">
+        Building Managers
+      </button>
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap font-semibold bg-surface-container-low text-on-surface-variant" id="role-btn-maintenance" onclick="setRoleTab('maintenance')">
+        Maintenance Crew
+      </button>
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap font-semibold bg-surface-container-low text-on-surface-variant" id="role-btn-ambassadors" onclick="setRoleTab('ambassadors')">
+        Resident Ambassadors
+      </button>
+</div>
+<!-- Checklist Item Container -->
+<div class="flex flex-col gap-2 mt-1" id="role-checklist">
+<!-- Injected via script based on selected role -->
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2">
+<span id="role-completed-count">0 of 4 actions completed</span>
+<button class="text-primary hover:underline" onclick="resetRoleTasks()">Reset Checklist</button>
+</div>
+</div>
+<!-- Bottom CTA Card: Host a Conservation Workshop -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md flex flex-col gap-3 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Host a Conservation Workshop</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Engage your dormitory floor or lab department</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Receive AquaCampus interactive audit kits, flow rate gauges, and live data telemetry access to lead resident awareness sessions.
+    </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2.5 px-4 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1.5 active:bg-on-primary-fixed-variant transition-colors shadow-sm" onclick="alert('Toolkit download and event registration initiated for your sector.')">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+        Request Action Kit
+      </button>
+<button class="py-2.5 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-title-sm text-title-sm font-semibold flex items-center justify-center hover:bg-surface-container transition-colors" onclick="alert('Viewing campus workshop materials &amp; presentation slides.')">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Engine -->
+<script>
+  // 1. Simulator Logic
+  const simData = {
+    conservative: {
+      volume: '4,750 L/d',
+      volumeSub: '10.0% Reduction',
+      cost: '$7,690 / yr',
+      costSub: 'Core retrofits only',
+      badge: 'AASHE STARS Silver',
+      desc: 'Qualifies for <strong>AASHE STARS Silver</strong> benchmark with hostel and kitchen tap aerators only.'
+    },
+    standard: {
+      volume: '11,400 L/d',
+      volumeSub: 'Full Phase 1 target',
+      cost: '$18,460 / yr',
+      costSub: 'Est. Utility Index',
+      badge: 'AASHE STARS Gold',
+      desc: 'Eligible for <strong>AASHE STARS Gold</strong> credit OP-22 (Water Consumption reduction).'
+    },
+    aggressive: {
+      volume: '16,625 L/d',
+      volumeSub: '35.0% Stretch Target',
+      cost: '$26,900 / yr',
+      costSub: 'Includes Greywater Reuse',
+      badge: 'AASHE STARS Platinum',
+      desc: 'Achieves <strong>AASHE STARS Platinum</strong> with localized greywater filtration + sub-surface turf.'
+    }
+  };
+
+  function setSimPlan(plan) {
+    const plans = ['conservative', 'standard', 'aggressive'];
+    plans.forEach(p => {
+      const btn = document.getElementById('sim-btn-' + p);
+      if (p === plan) {
+        btn.className = 'py-2 rounded-md font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all';
+      } else {
+        btn.className = 'py-2 rounded-md font-semibold text-on-surface-variant hover:text-on-surface transition-all';
+      }
+    });
+
+    const data = simData[plan];
+    document.getElementById('sim-volume').innerText = data.volume;
+    document.getElementById('sim-volume-sub').innerText = data.volumeSub;
+    document.getElementById('sim-cost').innerText = data.cost;
+    document.getElementById('sim-cost-sub').innerText = data.costSub;
+    document.getElementById('sim-status-badge').innerText = data.badge;
+    document.getElementById('sim-rating-desc').innerHTML = data.desc;
+  }
+
+  // 2. Collapsible Package Cards
+  function toggleCard(id) {
+    const content = document.getElementById(id + '-content');
+    const icon = document.getElementById(id + '-icon');
+    const isHidden = content.classList.contains('hidden');
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  let allExpanded = false;
+  function toggleAllCards() {
+    allExpanded = !allExpanded;
+    const ids = ['pkg-01', 'pkg-02', 'pkg-03', 'pkg-04', 'pkg-05'];
+    ids.forEach(id => {
+      const content = document.getElementById(id + '-content');
+      const icon = document.getElementById(id + '-icon');
+      if (allExpanded) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+    document.getElementById('toggle-all-btn').innerText = allExpanded ? 'Collapse All' : 'Expand All';
+  }
+
+  // 3. Operational Checklist Roles & State
+  const roleChecklists = {
+    managers: [
+      { id: 'm1', text: 'Approve Hostel Riser shutoff schedule for Week 3 installation', done: true },
+      { id: 'm2', text: 'Sign off municipal sub-meter rebate application with county', done: false },
+      { id: 'm3', text: 'Schedule quarterly dining facility water review with catering director', done: false },
+      { id: 'm4', text: 'Review live telemetry leak alerts in North Wing weekly dashboard', done: false }
+    ],
+    maintenance: [
+      { id: 't1', text: 'Complete ultrasonic baseline on STEM building chillers', done: true },
+      { id: 't2', text: 'Inventory 840 aerated 6.0L/min hostel showerheads in depot', done: true },
+      { id: 't3', text: 'Recalibrate quad micro-drip flow pressure to 22 PSI', done: false },
+      { id: 't4', text: 'Inspect dining hall pre-rinse high velocity spring valves', done: false }
+    ],
+    ambassadors: [
+      { id: 'a1', text: 'Post "5-Minute Power Shower" signage in Dorm A/B common restrooms', done: true },
+      { id: 'a2', text: 'Distribute quick-report QR codes for hostel dripping tap alerts', done: false },
+      { id: 'a3', text: 'Organize inter-dorm monthly water reduction leaderboard challenge', done: false },
+      { id: 'a4', text: 'Log floor walk survey on public sink aerators with AquaCampus mobile form', done: false }
+    ]
+  };
+
+  let currentRole = 'managers';
+
+  function renderChecklist() {
+    const list = roleChecklists[currentRole];
+    const container = document.getElementById('role-checklist');
+    container.innerHTML = '';
+
+    list.forEach((item, index) => {
+      const itemEl = document.createElement('div');
+      itemEl.className = 'flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low transition-colors cursor-pointer select-none';
+      itemEl.onclick = () => toggleChecklistItem(index);
+
+      const checkIcon = item.done ? 'check_box' : 'check_box_outline_blank';
+      const textStyle = item.done ? 'line-through text-on-surface-variant opacity-75' : 'text-on-surface';
+      const iconColor = item.done ? 'text-primary' : 'text-on-surface-variant';
+
+      itemEl.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] ${iconColor}">${checkIcon}</span>
+        <span class="font-body-sm text-body-sm ${textStyle} flex-1 leading-snug">${item.text}</span>
+      `;
+      container.appendChild(itemEl);
+    });
+
+    updateCompletedCount();
+  }
+
+  function toggleChecklistItem(index) {
+    roleChecklists[currentRole][index].done = !roleChecklists[currentRole][index].done;
+    renderChecklist();
+  }
+
+  function updateCompletedCount() {
+    const list = roleChecklists[currentRole];
+    const completed = list.filter(i => i.done).length;
+    document.getElementById('role-completed-count').innerText = `${completed} of ${list.length} actions completed`;
+  }
+
+  function resetRoleTasks() {
+    roleChecklists[currentRole].forEach(i => i.done = false);
+    renderChecklist();
+  }
+
+  function setRoleTab(role) {
+    currentRole = role;
+    const roles = ['managers', 'maintenance', 'ambassadors'];
+    roles.forEach(r => {
+      const btn = document.getElementById('role-btn-' + r);
+      if (r === role) {
+        btn.className = 'px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap font-semibold bg-primary text-on-primary';
+      } else {
+        btn.className = 'px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap font-semibold bg-surface-container-low text-on-surface-variant';
+      }
+    });
+    renderChecklist();
+  }
+
+  // Initialize checklist on load
+  document.addEventListener('DOMContentLoaded', () => {
+    renderChecklist();
+  });
+  // Immediate render fallback for embedded slot context
+  renderChecklist();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-title-sm"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="zones" href="#"><span class="material-symbols-outlined text-[24px]">domain</span><span class="font-label-sm text-label-sm mt-0.5">Zones</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-title-sm" data-path="conservation" href="#"><span class="material-symbols-outlined text-[24px]">eco</span><span class="font-label-sm text-label-sm mt-0.5">Conservation</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="telemetry" href="#"><span class="material-symbols-outlined text-[24px]">sensors</span><span class="font-label-sm text-label-sm mt-0.5">Telemetry</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="more-menu" href="#"><span class="material-symbols-outlined text-[24px]">more_horiz</span><span class="font-label-sm text-label-sm mt-0.5">More</span></a></div></nav><script>
+(function(){
+  var m=location.pathname.indexOf('/m/')!==-1, base=m?'/m/':'/';
+  var map={overview:'',zones:'zones.html','zones-and-buildings':'zones.html',conservation:'conservation.html','conservation-analytics':'conservation.html',telemetry:'telemetry.html','telemetry-and-architecture':'telemetry.html','leak-telemetry':'telemetry.html'};
+  var hash={'#overview':'','#zones':'zones.html','#conservation':'conservation.html','#telemetry':'telemetry.html','#schemas':'telemetry.html'};
+  document.querySelectorAll('a').forEach(function(a){
+    var p=a.getAttribute('data-path'), h=a.getAttribute('href');
+    var t = (p in map)?map[p]:(h in hash?hash[h]:null);
+    if(t!==null && t!==undefined) a.setAttribute('href', base+t);
+  });
+  var h=document.querySelector('a[href="#"] img[alt*="Logo"]');
+})();
+</script>
+</body></html>

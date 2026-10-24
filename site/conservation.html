@@ -1,0 +1,793 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>AquaCampus</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#00616f", "on-background": "#0b1c30", "on-primary-fixed-variant": "#004d62", "on-surface": "#0b1c30", "inverse-primary": "#81d1f0", "tertiary-fixed": "#ffddb8", "surface-container-lowest": "#ffffff", "on-primary-container": "#d3f1ff", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001f29", "primary-fixed": "#b9eaff", "on-secondary-fixed": "#001f25", "primary-fixed-dim": "#81d1f0", "secondary-fixed": "#a2eeff", "on-error-container": "#93000a", "on-secondary": "#ffffff", "surface-dim": "#cbdbf5", "tertiary-fixed-dim": "#ffb95f", "surface": "#f8f9ff", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "background": "#f8f9ff", "surface-tint": "#006781", "primary": "#005a71", "on-secondary-fixed-variant": "#004e5a", "tertiary": "#764900", "surface-container": "#e5eeff", "on-surface-variant": "#3f484c", "surface-variant": "#d3e4fe", "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "on-tertiary-container": "#ffe9d4", "on-error": "#ffffff", "outline": "#6f787d", "secondary-fixed-dim": "#2fd9f4", "secondary-container": "#3fe1fd", "error": "#ba1a1a", "surface-bright": "#f8f9ff", "error-container": "#ffdad6", "primary-container": "#0e7490", "tertiary-container": "#965f00", "secondary": "#006877", "inverse-surface": "#213145", "outline-variant": "#bec8cd", "inverse-on-surface": "#eaf1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin": "2rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem" }, fontFamily: { "display-lg-mobile": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><img alt="AquaCampus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VWze7kse1KdD10OFhgWx1STg0acrW8rDb2hqMXfPLwsJbXFjs5CI3sWfhklr0niaL1naZ6IBq6VqiMdeZN797qZR2fTHHUxi3wFCownPX9Hq1z81sP74aViXWw50ZzX8XzDhSK0U1nAWTt_Wp5g9SrxLjmRjhTY0UYZBrHHupoEPuoB9eFh5uU_BJ9WoW8xYrMIfOtyYhjPVz6QximAXBDxycucuW1R-Dy-EYRX7dwtUBUDEc4kvRKcA"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">AquaCampus</span><span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">~1,270 occupants</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">Campus water management platform</span></div></div><div class="flex items-center gap-4 lg:gap-6"><nav class="hidden md:flex items-center p-1 rounded-lg bg-surface-container-low" data-active-classes="bg-primary text-on-primary font-bold rounded-lg shadow-sm"><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#overview">Overview</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="zones-and-buildings" href="#zones">Zones &amp; Buildings</a><a aria-current="page" class="px-3 py-1.5 transition-colors bg-primary text-on-primary font-bold rounded-lg shadow-sm" data-path="conservation" href="#conservation">Conservation</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="telemetry-and-architecture" href="#telemetry">Telemetry &amp; Architecture</a></nav><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span class="">Typical Campus Day</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Decorative Hydraulic Wave Backdrop -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-high/60 via-surface to-background px-4 sm:px-6 lg:px-8 pt-8 pb-12">
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-8 relative z-10">
+<!-- Section Title & Strategic Framing -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+              Action Roadmap 2024-2025
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm uppercase font-semibold">
+              Ready for Deployment
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Campus Conservation &amp; Savings Plan
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Targeted technological retrofits and behavioral protocols to eliminate <span class="text-primary font-bold">11,400 L/day</span> (a verified 24% campus consumption reduction) across residential, culinary, and research zones.
+          </p>
+</div>
+<!-- Quick Action Trigger -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm hover:shadow transition-all hover:bg-surface-container-low active:scale-95" id="exportPlanBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="">Export Action Brief</span>
+</button>
+<a class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm shadow-md hover:bg-primary-container transition-all active:scale-95" href="#packages">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="">View 5 Packages</span>
+</a>
+</div>
+</div>
+<!-- Top Metrics Strip (Bento High-Contrast Strip) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Daily Conservation</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary font-bold">11,400</span>
+<span class="font-title-md text-title-md text-on-surface-variant">L / day</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-emerald-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+<span class="">24.0% total campus intake drop</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-primary"></div>
+</div>
+<!-- Metric 2 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Annual Preservation</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">history_toggle_off</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">4.16</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Million Litres</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">analytics</span>
+<span class="">Equals 1.66 Olympic swimming pools</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-secondary-container"></div>
+</div>
+<!-- Metric 3 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Carbon Footprint Avoided</span>
+<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-800">
+<span class="material-symbols-outlined text-[18px]">co2</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-emerald-800 font-bold">8.2</span>
+<span class="font-title-md text-title-md text-on-surface-variant">t CO₂e / yr</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-emerald-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">heat_pump</span>
+<span class="">Water pumping &amp; boiler heating savings</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-emerald-500"></div>
+</div>
+<!-- Metric 4 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Capital Payback</span>
+<div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">4.2</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Months</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="">Fastest ROI in physical plant assets</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-amber-400"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Scenario Modeling Simulator -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 -mt-6 z-20">
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Interactive Savings Simulator</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Simulate varying adoption scopes across campus population and physical infrastructure</span>
+</div>
+<!-- Scenario Mode Buttons -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low" role="group">
+<button class="scenario-btn px-4 py-2 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all" id="btn-conservative" onclick="setScenario('conservative')" type="button">
+            Conservative (10%)
+          </button>
+<button class="scenario-btn px-4 py-2 rounded-lg font-title-sm text-title-sm bg-primary text-on-primary shadow-sm font-bold transition-all" id="btn-standard" onclick="setScenario('standard')" type="button">
+            Standard Plan (24%)
+          </button>
+<button class="scenario-btn px-4 py-2 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all" id="btn-aggressive" onclick="setScenario('aggressive')" type="button">
+            Aggressive (35%)
+          </button>
+</div>
+</div>
+<!-- Real-time Dynamic Metrics Gauge Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Projected Daily Relief</span>
+<span class="material-symbols-outlined text-primary text-[18px]">shower</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold" id="sim-daily-val">11,400</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Litres / day</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500 rounded-full" id="sim-progress-bar" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1.5">
+<span class="">Baseline: 47,500 L/d</span>
+<span id="sim-percent-label" class="">24% reduction</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Projected Annual Cost Avoidance</span>
+<span class="material-symbols-outlined text-emerald-800 text-[18px]">currency_exchange</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-emerald-800 font-bold" id="sim-cost-val">$18,460</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ annum</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Derived from utility municipal volumetric tariffs + reduced sewage discharge levies.
+          </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="">Allocatable to student green innovation grants</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">AASHE STARS Rating Impact</span>
+<span class="material-symbols-outlined text-amber-800 text-[18px]">military_tech</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary font-bold font-headline-md text-headline-md">
+<span id="sim-stars-badge" class="">A</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold" id="sim-stars-desc">Gold Certification Pathway</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Water Stewardship Section (OP-21)</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">Compliance: 94.6% benchmark</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Prioritized Intervention Packages -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-12 flex flex-col gap-6" id="packages">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="font-label-md text-label-md uppercase text-primary font-bold tracking-wider">Engineering &amp; Operations</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Prioritized Intervention Packages</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Five modular retrofit programs ordered by consumption volume, cost-to-benefit ratio, and speed of execution.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Sort by:</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold shadow-sm">Volume Impact (High to Low)</span>
+</div>
+</div>
+<!-- 5 Specific Intervention Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Package 1: Residential Hostel Flow Optimization (Hero Card: 7 cols) -->
+<div class="lg:col-span-7 p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold">Package 01</span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Saves 4,500 L / day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">39.5% of total goal</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+<span class="">Phase 1 (Weeks 1-3)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Residential Hostel Flow Optimization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Hostel dormitories represent 58% of aggregate campus living usage. Restricting flow without degrading perceived user pressure yields instant gains.
+            </p>
+</div>
+<!-- Actions Breakdown Table / List -->
+<div class="flex flex-col gap-2.5 my-2">
+<div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">shower</span>
+</div>
+<div class="flex-1">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Aerated High-Velocity Showerheads</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Reduces output from unregulated 15.0 L/min to a needle-stream 7.0 L/min via micro-orifice Venturi injection.</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">-53% Flow</span>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+</div>
+<div class="flex-1">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Push-Button Auto-Delay Tap Valves</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Eliminates unattended running sinks in communal dormitory ablution blocks with 12-second hydraulic auto-cutoff.</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">2,200 L/d Saved</span>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">plumbing</span>
+</div>
+<div class="flex-1">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Thermal Tap Acoustic Leak Remediation</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Ultrasonic sweep of 184 hostel bathroom risers to eliminate silent tank trickle &amp; continuous weeping faucets.</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary bg-surface-container px-2 py-1 rounded">Zero-Leak Line</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Difficulty: <strong class="text-on-surface">Low</strong></span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Impact: <strong class="text-primary">Maximum</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Capex: $3,200 | Payback: 2.1 mo</span>
+</div>
+</div>
+<!-- Package 2: Commercial Kitchen Efficiency (Canteen - 5 cols) -->
+<div class="lg:col-span-5 p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase font-bold">Package 02</span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Save 2,400 L / day</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+<span class="">Phase 1 (Week 2)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Commercial Kitchen Efficiency</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Main dining hall and student café preparation sinks operate continuously during lunch &amp; dinner prep rushes.
+            </p>
+</div>
+<!-- Detailed points -->
+<div class="flex flex-col gap-2.5 my-2">
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">High-Velocity Pre-Rinse Spray Valves</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold">1.4 GPM vs 3.5 GPM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Swapping out 8 heavy-duty dish pit scullery arms cuts culinary hot water by 42%.</p>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Timed Soak Basins &amp; Batch Protocol</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold">Operational Shift</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mandate 2-phase soaking protocol rather than continuous running potable water over pots.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Difficulty: <strong class="text-on-surface">Medium</strong></span>
+<span class="">Impact: <strong class="text-secondary font-bold">High</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Capex: $1,450 | Payback: 1.8 mo</span>
+</div>
+</div>
+<!-- Package 3: Smart Restroom Retrofits (Washrooms - 4 cols) -->
+<div class="lg:col-span-4 p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold">Package 03</span>
+<span class="font-label-sm text-label-sm font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">2,000 L / day</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Smart Restroom Retrofits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Academic &amp; library blocks fixture modernization.</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">Dual-Flush Conversions (3L / 6L)</strong>
+              Drop from single 9L gravity tanks across 64 academic stalls.
+            </div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">PIR Infrared Optic Sensors</strong>
+              6-second maximum shutoff cycle stops accidental stuck valves.
+            </div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Phase 2 (Weeks 4-6)</span>
+<span class="text-primary font-bold">17.5% campus impact</span>
+</div>
+</div>
+<!-- Package 4: Landscape Precision Irrigation (Garden - 4 cols) -->
+<div class="lg:col-span-4 p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase font-bold">Package 04</span>
+<span class="font-label-sm text-label-sm font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">1,500 L / day</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Landscape Precision Irrigation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Central quad and botanical garden green spaces.</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">Sub-surface Micro Drip Lines</strong>
+              Bypasses spray evaporation; delivers moisture straight to root systems.
+            </div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">Dawn-Only Automated Cycles</strong>
+              Prevents 40% midday thermal vaporization loss via solar sensors.
+            </div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Phase 3 (Weeks 7-9)</span>
+<span class="text-primary font-bold">13.1% campus impact</span>
+</div>
+</div>
+<!-- Package 5: Technical & Recreational Facility Tuning (4 cols) -->
+<div class="lg:col-span-4 p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase font-bold">Package 05</span>
+<span class="font-label-sm text-label-sm font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">1,000 L / day</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Specialized Facility Tuning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Labs (600L), Sports (300L), Admin (100L).</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">Closed-Loop Lab Chilling Condensers</strong>
+              Stops once-through municipal cooling in Chemistry &amp; Bio labs.
+            </div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface block mb-0.5">Gymnasium Locker Solenoids</strong>
+              Enforces 4-minute maximum continuous sports shower cycles.
+            </div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Phase 3 (Weeks 8-10)</span>
+<span class="text-primary font-bold">8.8% campus impact</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Visual Comparison: Where the 11,400 L/Day Comes From -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-12">
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Savings Allocation Architecture</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Breakdown of the 11,400 L/Day Conservation Target</h3>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span> <span class="">Hostel (39.5%)</span>
+<span class="w-3 h-3 rounded-full bg-secondary inline-block ml-2"></span> <span class="">Canteen (21.1%)</span>
+<span class="w-3 h-3 rounded-full bg-primary-container inline-block ml-2"></span> <span class="">Washrooms (17.5%)</span>
+<span class="w-3 h-3 rounded-full bg-emerald-600 inline-block ml-2"></span> <span class="">Landscape (13.1%)</span>
+<span class="w-3 h-3 rounded-full bg-amber-600 inline-block ml-2"></span> <span class="">Specialized (8.8%)</span>
+</div>
+</div>
+<!-- Segmented Multi-Color Progress Bar -->
+<div class="w-full h-8 rounded-xl bg-surface-container-highest flex overflow-hidden shadow-inner p-1">
+<div class="h-full bg-primary rounded-l-lg transition-all hover:opacity-90 flex items-center justify-center text-on-primary font-label-sm text-label-sm font-bold" style="width: 39.5%;" title="Hostel: 4,500 L">39.5%</div>
+<div class="h-full bg-secondary transition-all hover:opacity-90 flex items-center justify-center text-on-secondary font-label-sm text-label-sm font-bold" style="width: 21.1%;" title="Canteen: 2,400 L">21.1%</div>
+<div class="h-full bg-primary-container transition-all hover:opacity-90 flex items-center justify-center text-on-primary font-label-sm text-label-sm font-bold" style="width: 17.5%;" title="Restrooms: 2,000 L">17.5%</div>
+<div class="h-full bg-emerald-600 transition-all hover:opacity-90 flex items-center justify-center text-white font-label-sm text-label-sm font-bold" style="width: 13.1%;" title="Landscape: 1,500 L">13.1%</div>
+<div class="h-full bg-amber-600 rounded-r-lg transition-all hover:opacity-90 flex items-center justify-center text-white font-label-sm text-label-sm font-bold" style="width: 8.8%;" title="Labs &amp; Sports: 1,000 L">8.8%</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-2">
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hostel Block</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4,500 L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">380 Active Occupants</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Canteen Complex</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">2,400 L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">850 Daily Meals</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Restrooms</span>
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">2,000 L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">64 Common Stalls</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Garden &amp; Quads</span>
+<span class="font-headline-sm text-headline-sm text-emerald-700 font-bold">1,500 L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">3.2 Hectares Green</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Labs &amp; Sports</span>
+<span class="font-headline-sm text-headline-sm text-amber-700 font-bold">1,000 L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Specialized Lines</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Implementation Roadmap (Gantt-Style Progressive Timeline) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-12 flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Execution Trajectory</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">10-Week Implementation Roadmap</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Structured three-phase phased deployment minimizing disruption to academic calendars.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-full font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Campus Phase 1 Currently Active
+        </span>
+</div>
+</div>
+<!-- Gantt / Timeline Matrix -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-6 overflow-x-auto">
+<!-- Timeline Header Axis -->
+<div class="grid grid-cols-12 gap-2 pb-3 border-b-0 min-w-[700px] text-center font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+<div class="col-span-4 text-left font-bold text-on-surface">Initiative Track</div>
+<div class="col-span-2">Weeks 1 - 2</div>
+<div class="col-span-2">Weeks 3 - 4</div>
+<div class="col-span-2">Weeks 5 - 7</div>
+<div class="col-span-2">Weeks 8 - 10</div>
+</div>
+<!-- Phase 1 Track -->
+<div class="flex flex-col gap-4 min-w-[700px]">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Phase 1: Quick Audits &amp; High-Yield Flow Caps</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hostel showerheads &amp; kitchen scullery nozzle swaps</span>
+</div>
+<!-- Bar spanning W1-W3 -->
+<div class="col-span-8 grid grid-cols-8 gap-1 h-10 items-center">
+<div class="col-span-3 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-between px-3 shadow-sm font-label-sm text-label-sm font-bold">
+<span class="">Hostel + Canteen Swap</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="col-span-5 h-2 rounded-full bg-surface-container"></div>
+</div>
+</div>
+<!-- Phase 2 Track -->
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Phase 2: Restroom &amp; Academic Upgrades</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dual-flush conversions, PIR sensors &amp; line valves</span>
+</div>
+<!-- Bar spanning W4-W7 -->
+<div class="col-span-8 grid grid-cols-8 gap-1 h-10 items-center">
+<div class="col-span-2 h-2 rounded-full bg-surface-container"></div>
+<div class="col-span-3 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-between px-3 shadow-sm font-label-sm text-label-sm font-bold">
+<span class="">Restroom Sensor Retrofits</span>
+<span class="material-symbols-outlined text-[14px]">timelapse</span>
+</div>
+<div class="col-span-3 h-2 rounded-full bg-surface-container"></div>
+</div>
+</div>
+<!-- Phase 3 Track -->
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Phase 3: Automation &amp; Student Behavioral Drive</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Micro-drip weather irrigation &amp; dorm energy dashboards</span>
+</div>
+<!-- Bar spanning W7-W10 -->
+<div class="col-span-8 grid grid-cols-8 gap-1 h-10 items-center">
+<div class="col-span-4 h-2 rounded-full bg-surface-container"></div>
+<div class="col-span-4 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-between px-3 shadow-sm font-label-sm text-label-sm font-bold">
+<span class="">Grounds Automation + Dorm Cup</span>
+<span class="material-symbols-outlined text-[14px]">flag</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Roadmap Footnote -->
+<div class="mt-4 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">engineering</span>
+<span class="font-body-sm text-body-sm text-on-surface">Physical installation carried out during off-peak weekend hours (06:00 - 10:00) with zero water shutoff during instructional periods.</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary shrink-0 uppercase tracking-wide">Facilities Approved</span>
+</div>
+</div>
+</section>
+<!-- Interactive Campus Action Checklist -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Operational Protocols</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Role-Based Conservation Checklist</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Immediate operational checks for Facility Managers, Maintenance Crews, and Dorm Student Ambassadors.</p>
+</div>
+<!-- Checklist completion counter -->
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/40 flex items-center justify-center text-primary font-bold font-title-md text-title-md" id="checkedCountDisplay">
+          4/9
+        </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Protocols Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="checkedStatusDesc">Ongoing daily audits</span>
+</div>
+</div>
+</div>
+<!-- Checklist Columns per Persona -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Persona 1: Facilities & Building Managers -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3 pb-3">
+<div class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Building Managers</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily system thresholds</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary focus:ring-primary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Verify Baseline Main Inflow</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Confirm 02:00-04:00 night-flow baseline does not exceed 380 L/hr.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary focus:ring-primary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Scullery Pressure Regulation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verify canteen main booster pump delivery does not exceed 45 PSI.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary accent-primary focus:ring-primary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Weekly Telemetry Calibration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cross-check digital pulse meters against municipal water utility billing dials.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Persona 2: Maintenance & Plumbing Crew -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3 pb-3">
+<div class="w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Maintenance Crew</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hardware maintenance</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary accent-secondary focus:ring-secondary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Aerator De-liming Cleanout</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remove calcium buildup in hostel showerheads to maintain aerated stream.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-secondary accent-secondary focus:ring-secondary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Acoustic Riser Sweep</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inspect 12 vertical shafts in Engineering Block for micro-pinhole leaks.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-secondary accent-secondary focus:ring-secondary" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Irrigation Drip Header Check</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flush fine soil silt from Central Quad micro-perforated emitter tubing.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Persona 3: Student Resident Ambassadors -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3 pb-3">
+<div class="w-9 h-9 rounded-xl bg-emerald-700 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Resident Ambassadors</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Community stewardship</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-emerald-700 accent-emerald-700 focus:ring-emerald-700" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Post '5-Min Shower' Prompts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Waterproof vinyl prompts installed on all 48 hostel shower stall glass dividers.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-emerald-700 accent-emerald-700 focus:ring-emerald-700" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Hostel Wing Energy Board Updates</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Post weekly litres-per-capita rankings on 1st, 2nd, and 3rd floor lounge screens.</span>
+</div>
+</label>
+<label class="checklist-item flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input class="mt-1 w-4 h-4 rounded text-emerald-700 accent-emerald-700 focus:ring-emerald-700" onchange="updateChecklist()" type="checkbox">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Rapid Leak Report QR Activation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verify student quick-scan QR code tags route instantly to the dispatch slack channel.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Final CTA Banner -->
+<div class="mt-6 p-6 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-on-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px] text-primary-fixed">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold">Host a Conservation Workshop</span>
+<span class="font-body-md text-body-md text-on-primary-container">AquaCampus facilitates 20-minute dormitory briefings with free low-flow shower timer kits.</span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-5 py-2.5 rounded-lg bg-surface-container-lowest text-primary font-title-sm text-title-sm font-bold hover:bg-surface transition-all active:scale-95 shadow" onclick="alert('Booking request dispatched to AquaCampus Facilities Coordinator!')">
+          Request Session
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Logic -->
+<script>
+    const scenarios = {
+      conservative: {
+        daily: '4,750',
+        percent: '10% reduction',
+        cost: '$7,690',
+        barWidth: '28%',
+        starsBadge: 'B+',
+        starsDesc: 'Silver Pathway (Standard)'
+      },
+      standard: {
+        daily: '11,400',
+        percent: '24% reduction',
+        cost: '$18,460',
+        barWidth: '68%',
+        starsBadge: 'A',
+        starsDesc: 'Gold Certification Pathway'
+      },
+      aggressive: {
+        daily: '16,625',
+        percent: '35% reduction',
+        cost: '$26,930',
+        barWidth: '94%',
+        starsBadge: 'A+',
+        starsDesc: 'Platinum Benchmark Pioneer'
+      }
+    };
+
+    function setScenario(type) {
+      // Button states
+      document.querySelectorAll('.scenario-btn').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'font-bold');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      const activeBtn = document.getElementById('btn-' + type);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'font-bold');
+        activeBtn.classList.remove('text-on-surface-variant');
+      }
+
+      // Update values with snappy transition
+      const s = scenarios[type];
+      const dailyEl = document.getElementById('sim-daily-val');
+      const costEl = document.getElementById('sim-cost-val');
+      const barEl = document.getElementById('sim-progress-bar');
+      const pctLabel = document.getElementById('sim-percent-label');
+      const badgeEl = document.getElementById('sim-stars-badge');
+      const descEl = document.getElementById('sim-stars-desc');
+
+      if (dailyEl) dailyEl.textContent = s.daily;
+      if (costEl) costEl.textContent = s.cost;
+      if (barEl) barEl.style.width = s.barWidth;
+      if (pctLabel) pctLabel.textContent = s.percent;
+      if (badgeEl) badgeEl.textContent = s.starsBadge;
+      if (descEl) descEl.textContent = s.starsDesc;
+    }
+
+    function updateChecklist() {
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      let checked = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) checked++;
+      });
+      const display = document.getElementById('checkedCountDisplay');
+      const desc = document.getElementById('checkedStatusDesc');
+      if (display) display.textContent = `${checked}/${checkboxes.length}`;
+      if (desc) {
+        if (checked === checkboxes.length) {
+          desc.textContent = 'All protocols validated!';
+        } else if (checked > 5) {
+          desc.textContent = 'Substantial compliance active';
+        } else {
+          desc.textContent = 'Ongoing daily audits';
+        }
+      }
+    }
+
+    document.getElementById('exportPlanBtn')?.addEventListener('click', () => {
+      window.print();
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-6 mt-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><div class="text-right">AquaCampus Environmental Telemetry © 2024</div></div></footer>
+
+<script>
+(function(){
+  var m=location.pathname.indexOf('/m/')!==-1, base=m?'/m/':'/';
+  var map={overview:'',zones:'zones.html','zones-and-buildings':'zones.html',conservation:'conservation.html','conservation-analytics':'conservation.html',telemetry:'telemetry.html','telemetry-and-architecture':'telemetry.html','leak-telemetry':'telemetry.html'};
+  var hash={'#overview':'','#zones':'zones.html','#conservation':'conservation.html','#telemetry':'telemetry.html','#schemas':'telemetry.html'};
+  document.querySelectorAll('a').forEach(function(a){
+    var p=a.getAttribute('data-path'), h=a.getAttribute('href');
+    var t = (p in map)?map[p]:(h in hash?hash[h]:null);
+    if(t!==null && t!==undefined) a.setAttribute('href', base+t);
+  });
+  var h=document.querySelector('a[href="#"] img[alt*="Logo"]');
+})();
+</script>
+</body></html>

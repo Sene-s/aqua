@@ -1,0 +1,733 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>AquaCampus</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "outline": "#6f787d", "outline-variant": "#bec8cd", "secondary": "#006877", "primary": "#005a71", "secondary-fixed-dim": "#2fd9f4", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb95f", "surface-tint": "#006781", "primary-fixed": "#b9eaff", "inverse-on-surface": "#eaf1ff", "on-primary-container": "#d3f1ff", "on-primary-fixed-variant": "#004d62", "surface-dim": "#cbdbf5", "secondary-container": "#3fe1fd", "on-primary-fixed": "#001f29", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "on-secondary-fixed-variant": "#004e5a", "tertiary": "#764900", "on-secondary": "#ffffff", "background": "#f8f9ff", "surface": "#f8f9ff", "on-surface": "#0b1c30", "on-secondary-container": "#00616f", "tertiary-fixed": "#ffddb8", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "primary-container": "#0e7490", "inverse-primary": "#81d1f0", "on-error-container": "#93000a", "on-tertiary-fixed": "#2a1700", "surface-container-lowest": "#ffffff", "tertiary-container": "#965f00", "secondary-fixed": "#a2eeff", "primary-fixed-dim": "#81d1f0", "on-secondary-fixed": "#001f25", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#653e00", "inverse-surface": "#213145", "on-surface-variant": "#3f484c", "on-tertiary-container": "#ffe9d4", "surface-container-highest": "#d3e4fe", "error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "space-sm": "0.5rem" }, fontFamily: { "title-sm": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "headline-md": ["Inter"], "display-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><img alt="AquaCampus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VWze7kse1KdD10OFhgWx1STg0acrW8rDb2hqMXfPLwsJbXFjs5CI3sWfhklr0niaL1naZ6IBq6VqiMdeZN797qZR2fTHHUxi3wFCownPX9Hq1z81sP74aViXWw50ZzX8XzDhSK0U1nAWTt_Wp5g9SrxLjmRjhTY0UYZBrHHupoEPuoB9eFh5uU_BJ9WoW8xYrMIfOtyYhjPVz6QximAXBDxycucuW1R-Dy-EYRX7dwtUBUDEc4kvRKcA"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">AquaCampus</span><span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">~1,270 occupants</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">Campus water monitoring system</span></div></div><div class="flex items-center gap-4 lg:gap-6"><nav class="hidden md:flex items-center p-1 rounded-lg bg-surface-container-low" data-active-classes="bg-primary text-on-primary font-bold rounded-lg shadow-sm"><a aria-current="page" class="px-3 py-1.5 transition-colors bg-primary text-on-primary font-bold rounded-lg shadow-sm" data-path="overview" href="#">Overview</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="zones-and-buildings" href="#">Zones &amp; Buildings</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="conservation-analytics" href="#">Conservation</a><a class="px-3 py-1.5 rounded-md font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="leak-telemetry" href="#">Telemetry</a></nav><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span class="">Typical Campus Day</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<div class="flex flex-col w-full space-y-8">
+<!-- META STATUS & DISCLOSURE BANNER -->
+
+<!-- 4 KPI SUMMARY CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<!-- Card 1: Total Daily Consumption -->
+<div class="bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between transition-shadow hover:shadow-md">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Daily Total</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Baseline</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-display-lg text-primary tabular-nums">48,200</span>
+<span class="font-title-md text-title-md text-on-surface-variant">L/day</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">water_drop</span>
+<span class="">Aggregated across 7 campus facilities</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aggregated Flow</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">100% Campus Load</span>
+</div>
+</div>
+<!-- Card 2: Highest Consumer -->
+<div class="bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between transition-shadow hover:shadow-md">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-error">Highest Consumer</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase">#1 Priority</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-display-lg text-error tabular-nums">Hostel</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+<span class="font-semibold text-on-surface">18,500 L/day</span>
+<span class="">• 38.4% share</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-error-container/40 rounded-lg p-2.5 flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-on-error-container">Critical Load Alert</span>
+<span class="font-label-sm text-label-sm font-semibold text-error">&gt;15% Threshold Flag</span>
+</div>
+</div>
+<!-- Card 3: Per-Person Average -->
+<div class="bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between transition-shadow hover:shadow-md">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Per-Person Average</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Per Capita</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-display-lg text-on-surface tabular-nums">38</span>
+<span class="font-title-md text-title-md text-on-surface-variant">L / person</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+<span class="">Based on ~1,270 campus occupants/day</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Benchmark Rating</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">Within Standard Range</span>
+</div>
+</div>
+<!-- Card 4: Potential Daily Savings -->
+<div class="bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between transition-shadow hover:shadow-md">
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Savings Potential</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase">23.7% Target</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display-lg text-display-lg text-secondary tabular-nums">11,400</span>
+<span class="font-title-md text-title-md text-on-surface-variant">L/day</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span class="font-semibold text-secondary">~24% reduction</span>
+<span class="">viable today</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-secondary-fixed/30 rounded-lg p-2.5 flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm text-on-secondary-container">Annual Impact</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">4.16M Litres/Yr</span>
+</div>
+</div>
+</section>
+<!-- TWO CHARTS: FACILITY CONSUMPTION & WATER ACTIVITY SPLIT -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Left Chart: Facility Consumption (Horizontal Bars) - 60% (7 cols on lg) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">bar_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Facility Consumption Breakdown</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Static distribution across campus zones (litres per day)</p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 text-label-sm font-label-sm">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container">≥15% High</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed">5–15% Mod</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">&lt;5% Low</span>
+</div>
+</div>
+<!-- Quick Alert Summary Strip -->
+<div class="mb-4 p-3 rounded-lg bg-surface-container-low flex flex-wrap items-center gap-3 text-label-md font-label-md">
+<span class="text-on-surface-variant">Flagged High Consumers:</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Hostel (38.4%)
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Canteen (20.3%)
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Washrooms (15.8%)
+        </span>
+</div>
+<!-- Chart Container -->
+<div class="relative w-full h-[320px] sm:h-[350px]">
+<canvas id="facilityChart" width="814" height="437" style="display: block; box-sizing: border-box; height: 350px; width: 651px;"></canvas>
+</div>
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Campus threshold formula: Rule-based classification based on standard facility baseline load</span>
+<span class="font-semibold text-primary">Total: 48,200 L</span>
+</div>
+</div>
+<!-- Right Chart: Water Activity Split (Donut) - 40% (5 cols on lg) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between">
+<div class="mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">pie_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Water Activity Split</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Proportional task consumption across campus footprint</p>
+</div>
+<!-- Donut Chart & Center Legend Layout -->
+<div class="relative w-full h-[240px] flex items-center justify-center my-2">
+<canvas id="activityChart" width="555" height="300" style="display: block; box-sizing: border-box; height: 240px; width: 444px;"></canvas>
+</div>
+<!-- Custom Activity Legend -->
+<div class="grid grid-cols-2 gap-2 mt-4 pt-4 bg-surface-container-low rounded-xl p-3">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#005a71] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Washing / Bathing</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-bold">36%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#006877] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Cooking / Clean</span>
+</div>
+<span class="font-title-sm text-title-sm text-secondary font-bold">22%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#764900] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Flushing</span>
+</div>
+<span class="font-title-sm text-title-sm text-tertiary font-bold">20%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#0e7490] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Drinking</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary font-bold">8%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2fd9f4] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Gardening</span>
+</div>
+<span class="font-title-sm text-title-sm text-secondary font-bold">8%</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-lowest">
+<div class="flex items-center gap-2 truncate">
+<span class="w-2.5 h-2.5 rounded-full bg-[#6f787d] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Lab Science</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">6%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGH-USAGE AREAS AND HOW TO SAVE -->
+<section class="flex flex-col space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[24px]">water_ec</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">High-Usage Areas and How to Save</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Prioritized intervention matrix targeting campus facilities exceeding the 15% threshold.</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+<span class="">Combined Target: 8,900 L/day from top 3</span>
+</div>
+</div>
+<!-- 3 Action Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Hostel -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Campus Residence</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Hostel</h3>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase">#1 Consumer</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">High Usage</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low mb-4">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily Baseline</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">18,500 L</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Campus Share</span>
+<span class="font-semibold text-error">38.4% of total water</span>
+</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">shower</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Targeted Intervention</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Install low-flow showerheads (reduces flow from 15L to 7L/min) and deploy tap leak inspections.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 bg-surface-container-low rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Achievable Reduction</span>
+<span class="font-title-md text-title-md text-secondary font-bold">Save ~4,500 L/day</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 24.3%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Intervention Efficacy</span>
+<span class="font-semibold text-secondary">24.3% Facility Savings</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Canteen -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Food Services</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Canteen</h3>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">High Usage</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#2 Consumer</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low mb-4">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily Baseline</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">9,800 L</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Campus Share</span>
+<span class="font-semibold text-tertiary">20.3% of total water</span>
+</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">countertops</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Targeted Intervention</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Equip pre-rinse high-velocity spray valves &amp; enforce scheduled batch dish-washing cycles.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 bg-surface-container-low rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Achievable Reduction</span>
+<span class="font-title-md text-title-md text-secondary font-bold">Save ~2,400 L/day</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 24.5%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Intervention Efficacy</span>
+<span class="font-semibold text-secondary">24.5% Facility Savings</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Washrooms -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Public Sanitation</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Washrooms</h3>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">High Usage</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#3 Consumer</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low mb-4">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily Baseline</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">7,600 L</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Campus Share</span>
+<span class="font-semibold text-tertiary">15.8% of total water</span>
+</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">valve</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block">Targeted Intervention</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Retrofit dual-flush toilet valves (3L/6L) and optical sensor taps with automatic 6-second shutoff.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 bg-surface-container-low rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Achievable Reduction</span>
+<span class="font-title-md text-title-md text-secondary font-bold">Save ~2,000 L/day</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 26.3%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Intervention Efficacy</span>
+<span class="font-semibold text-secondary">26.3% Facility Savings</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Banner of Other Potential Savings -->
+<div class="bg-surface-container rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">energy_savings_leaf</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface">Additional Facility Initiatives:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Garden:</strong> 1,500 L (drip irrigation &amp; dawn schedule) • 
+            <strong class="text-on-surface">Labs:</strong> 600 L (closed-loop chillers) • 
+            <strong class="text-on-surface">Sports:</strong> 300 L • 
+            <strong class="text-on-surface">Library &amp; Admin:</strong> 100 L
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 bg-surface-container-lowest px-4 py-2 rounded-lg shadow-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Total Potential:</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">11,400 L/day</span>
+<span class="text-body-sm text-on-surface-variant font-medium">(24%)</span>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE FACILITY COMPARISON TOOL -->
+<section class="bg-surface-container-lowest rounded-xl p-5 sm:p-7 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">compare_arrows</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Interactive Facility Comparison Tool</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Select any two facilities to calculate proportional delta, ratio, and comparative volume.</p>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase font-semibold">Active Engine</span>
+</div>
+<!-- Dual Dropdown Selectors -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<!-- Selector A -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold flex items-center gap-1.5" for="selectFacilityA">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Primary Facility (A)
+        </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-4 py-2.5 font-title-sm text-title-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm appearance-none cursor-pointer" id="selectFacilityA">
+<option selected="" value="hostel">Hostel — 18,500 L/day</option>
+<option value="canteen">Canteen — 9,800 L/day</option>
+<option value="washrooms">Washrooms — 7,600 L/day</option>
+<option value="labs">Labs — 4,200 L/day</option>
+<option value="garden">Garden — 3,900 L/day</option>
+<option value="sports">Sports Complex — 2,500 L/day</option>
+<option value="library">Library &amp; Admin — 1,700 L/day</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Selector B -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold flex items-center gap-1.5" for="selectFacilityB">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Comparative Facility (B)
+        </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-4 py-2.5 font-title-sm text-title-sm focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none cursor-pointer" id="selectFacilityB">
+<option value="hostel">Hostel — 18,500 L/day</option>
+<option selected="" value="canteen">Canteen — 9,800 L/day</option>
+<option value="washrooms">Washrooms — 7,600 L/day</option>
+<option value="labs">Labs — 4,200 L/day</option>
+<option value="garden">Garden — 3,900 L/day</option>
+<option value="sports">Sports Complex — 2,500 L/day</option>
+<option value="library">Library &amp; Admin — 1,700 L/day</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Active Calculation Block -->
+<div class="p-5 sm:p-6 rounded-xl bg-surface-container-low flex flex-col gap-6" id="compareResults">
+<!-- 3 Metrics row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Net Consumption Difference</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-primary tabular-nums" id="diffLitres">+8,700</span>
+<span class="font-title-sm text-title-sm text-on-surface-variant">L/day</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block" id="diffDirection">Hostel consumes more than Canteen</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Consumption Ratio</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-secondary tabular-nums" id="diffRatio">1.89x</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block" id="diffRatioText">Hostel is 1.89x of Canteen</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Percentage Variance</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-tertiary tabular-nums" id="diffPercent">+88.8%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block" id="diffPercentSub">Relative to Canteen baseline</span>
+</div>
+</div>
+<!-- Comparative Bar Visual -->
+<div class="space-y-4 pt-2">
+<div>
+<div class="flex justify-between items-center mb-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface" id="labelBarA">Hostel</span>
+<span class="font-semibold text-primary" id="valBarA">18,500 L/day (38.4%)</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-300" id="barA" style="width: 100%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1 font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface" id="labelBarB">Canteen</span>
+<span class="font-semibold text-secondary" id="valBarB">9,800 L/day (20.3%)</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-secondary h-3 rounded-full transition-all duration-300" id="barB" style="width: 53%;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPLIANCE STATEMENTS & CAPABILITIES CARD -->
+<section class="bg-surface-container-low rounded-xl p-5 sm:p-6 shadow-sm space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">System Boundaries &amp; Data Transparency</h3>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-lg">
+<div class="flex items-center gap-2 text-secondary font-title-sm text-title-sm mb-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="">System Capabilities (Can Do)</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">done</span>
+<span class="">Facility consumption cross-comparison using standard baseline fixtures.</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">done</span>
+<span class="">Rule-based high consumption classification (≥15% High alert flag).</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">done</span>
+<span class="">Targeted fixture retrofits &amp; behavioral conservation potential estimation.</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">done</span>
+<span class="">Task-based activity split across major institutional functional categories.</span>
+</li>
+</ul>
+</div>
+
+</div>
+</section>
+</div>
+<!-- SCRIPT: CHARTS & COMPARISON TOOL -->
+<script>
+  (function initDashboard() {
+    // 1. DATA DEFINITIONS
+    const facilityData = {
+      hostel: { name: "Hostel", litres: 18500, share: 38.4, status: "High" },
+      canteen: { name: "Canteen", litres: 9800, share: 20.3, status: "High" },
+      washrooms: { name: "Washrooms", litres: 7600, share: 15.8, status: "High" },
+      labs: { name: "Labs", litres: 4200, share: 8.7, status: "Moderate" },
+      garden: { name: "Garden", litres: 3900, share: 8.1, status: "Moderate" },
+      sports: { name: "Sports Complex", litres: 2500, share: 5.2, status: "Moderate" },
+      library: { name: "Library & Admin", litres: 1700, share: 3.5, status: "Low" }
+    };
+
+    // 2. CHART 1: Horizontal Bar Chart
+    const ctxBar = document.getElementById('facilityChart');
+    if (ctxBar && window.Chart) {
+      new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: ['Hostel (#1)', 'Canteen', 'Washrooms', 'Labs', 'Garden', 'Sports Complex', 'Library & Admin'],
+          datasets: [{
+            label: 'Daily Consumption (L)',
+            data: [18500, 9800, 7600, 4200, 3900, 2500, 1700],
+            backgroundColor: [
+              '#ba1a1a', // Hostel - High Consumer Highlight (Theme Error Red)
+              '#764900', // Canteen - High Amber/Tertiary
+              '#764900', // Washrooms - High Amber/Tertiary
+              '#005a71', // Labs - Primary Teal
+              '#005a71', // Garden - Primary Teal
+              '#006877', // Sports - Secondary
+              '#6f787d'  // Library - Low Outline Slate
+            ],
+            borderRadius: 6,
+            borderSkipped: false,
+            barPercentage: 0.72
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(ctx) {
+                  const val = ctx.raw;
+                  const pct = ((val / 48200) * 100).toFixed(1);
+                  return ` ${val.toLocaleString()} L/day (${pct}% of campus total)`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(111, 120, 125, 0.1)' },
+              ticks: {
+                color: '#3f484c',
+                font: { family: 'Inter', size: 11 },
+                callback: (val) => val.toLocaleString() + ' L'
+              }
+            },
+            y: {
+              grid: { display: false },
+              ticks: {
+                color: '#0b1c30',
+                font: { family: 'Inter', size: 12, weight: '600' }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // 3. CHART 2: Water Activity Donut Chart
+    const ctxDonut = document.getElementById('activityChart');
+    if (ctxDonut && window.Chart) {
+      new Chart(ctxDonut, {
+        type: 'doughnut',
+        data: {
+          labels: ['Washing / Bathing', 'Cooking / Cleaning', 'Flushing', 'Drinking', 'Gardening', 'Lab Science'],
+          datasets: [{
+            data: [36, 22, 20, 8, 8, 6],
+            backgroundColor: [
+              '#005a71', // Washing/Bathing (Primary)
+              '#006877', // Cooking/Cleaning (Secondary)
+              '#764900', // Flushing (Tertiary)
+              '#0e7490', // Drinking (Primary Container)
+              '#2fd9f4', // Gardening (Secondary Fixed Dim)
+              '#6f787d'  // Lab Use (Outline)
+            ],
+            borderWidth: 2,
+            borderColor: '#ffffff',
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '68%',
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(ctx) {
+                  return ` ${ctx.label}: ${ctx.raw}%`;
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // 4. INTERACTIVE FACILITY COMPARISON LOGIC
+    const selA = document.getElementById('selectFacilityA');
+    const selB = document.getElementById('selectFacilityB');
+
+    function updateComparison() {
+      const keyA = selA.value;
+      const keyB = selB.value;
+
+      const fA = facilityData[keyA];
+      const fB = facilityData[keyB];
+
+      const diff = fA.litres - fB.litres;
+      const absDiff = Math.abs(diff);
+
+      const diffLitresEl = document.getElementById('diffLitres');
+      const diffDirEl = document.getElementById('diffDirection');
+      const diffRatioEl = document.getElementById('diffRatio');
+      const diffRatioTextEl = document.getElementById('diffRatioText');
+      const diffPercentEl = document.getElementById('diffPercent');
+      const diffPercentSubEl = document.getElementById('diffPercentSub');
+
+      const labelBarA = document.getElementById('labelBarA');
+      const valBarA = document.getElementById('valBarA');
+      const barA = document.getElementById('barA');
+
+      const labelBarB = document.getElementById('labelBarB');
+      const valBarB = document.getElementById('valBarB');
+      const barB = document.getElementById('barB');
+
+      // Net difference
+      if (diff > 0) {
+        diffLitresEl.innerText = '+' + diff.toLocaleString();
+        diffDirEl.innerText = `${fA.name} consumes more than ${fB.name}`;
+      } else if (diff < 0) {
+        diffLitresEl.innerText = '-' + absDiff.toLocaleString();
+        diffDirEl.innerText = `${fA.name} consumes less than ${fB.name}`;
+      } else {
+        diffLitresEl.innerText = '0';
+        diffDirEl.innerText = 'Identical consumption levels';
+      }
+
+      // Ratio
+      if (fB.litres > 0) {
+        const ratio = (fA.litres / fB.litres).toFixed(2);
+        diffRatioEl.innerText = ratio + 'x';
+        diffRatioTextEl.innerText = `${fA.name} is ${ratio}x of ${fB.name}`;
+      }
+
+      // Percentage difference
+      if (fB.litres > 0) {
+        const pctDiff = (((fA.litres - fB.litres) / fB.litres) * 100).toFixed(1);
+        diffPercentEl.innerText = (pctDiff > 0 ? '+' : '') + pctDiff + '%';
+        diffPercentSubEl.innerText = `Relative to ${fB.name} baseline`;
+      }
+
+      // Visual Bars (proportional to highest of the two or hostel max 18,500)
+      const maxVal = Math.max(fA.litres, fB.litres, 1);
+      const widthA = Math.round((fA.litres / maxVal) * 100);
+      const widthB = Math.round((fB.litres / maxVal) * 100);
+
+      labelBarA.innerText = fA.name;
+      valBarA.innerText = `${fA.litres.toLocaleString()} L/day (${fA.share}%)`;
+      barA.style.width = widthA + '%';
+
+      labelBarB.innerText = fB.name;
+      valBarB.innerText = `${fB.litres.toLocaleString()} L/day (${fB.share}%)`;
+      barB.style.width = widthB + '%';
+    }
+
+    if (selA && selB) {
+      selA.addEventListener('change', updateComparison);
+      selB.addEventListener('change', updateComparison);
+      updateComparison();
+    }
+  })();
+</script></div></main><footer class="w-full bg-surface-container-low py-6 mt-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span><span class="">Campus telemetry active &amp; synchronized.</span></div><div class="text-right">AquaCampus Environmental Telemetry © 2024</div></div></footer>
+
+<script>
+(function(){
+  var m=location.pathname.indexOf('/m/')!==-1, base=m?'/m/':'/';
+  var map={overview:'',zones:'zones.html','zones-and-buildings':'zones.html',conservation:'conservation.html','conservation-analytics':'conservation.html',telemetry:'telemetry.html','telemetry-and-architecture':'telemetry.html','leak-telemetry':'telemetry.html'};
+  var hash={'#overview':'','#zones':'zones.html','#conservation':'conservation.html','#telemetry':'telemetry.html','#schemas':'telemetry.html'};
+  document.querySelectorAll('a').forEach(function(a){
+    var p=a.getAttribute('data-path'), h=a.getAttribute('href');
+    var t = (p in map)?map[p]:(h in hash?hash[h]:null);
+    if(t!==null && t!==undefined) a.setAttribute('href', base+t);
+  });
+  var h=document.querySelector('a[href="#"] img[alt*="Logo"]');
+})();
+</script>
+</body></html>

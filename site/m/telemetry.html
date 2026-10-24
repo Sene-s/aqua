@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#004e5a", "on-primary": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#653e00", "secondary-container": "#3fe1fd", "outline-variant": "#bec8cd", "outline": "#6f787d", "primary": "#005a71", "tertiary-fixed-dim": "#ffb95f", "surface-container-lowest": "#ffffff", "surface-tint": "#006781", "background": "#f8f9ff", "error": "#ba1a1a", "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#001f29", "on-primary-container": "#d3f1ff", "inverse-primary": "#81d1f0", "secondary-fixed-dim": "#2fd9f4", "on-error": "#ffffff", "tertiary": "#764900", "inverse-surface": "#213145", "on-secondary-fixed": "#001f25", "on-primary-fixed-variant": "#004d62", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "tertiary-container": "#965f00", "secondary-fixed": "#a2eeff", "on-error-container": "#93000a", "on-surface": "#0b1c30", "primary-fixed": "#b9eaff", "surface-dim": "#cbdbf5", "surface-container-high": "#dce9ff", "on-secondary": "#ffffff", "primary-container": "#0e7490", "on-tertiary-container": "#ffe9d4", "on-surface-variant": "#3f484c", "secondary": "#006877", "surface-container-low": "#eff4ff", "surface-variant": "#d3e4fe", "surface-bright": "#f8f9ff", "error-container": "#ffdad6", "tertiary-fixed": "#ffddb8", "on-tertiary": "#ffffff", "primary-fixed-dim": "#81d1f0", "surface": "#f8f9ff", "on-secondary-container": "#00616f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin": "2rem", "space-xl": "2rem" }, "fontFamily": { "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "title-sm": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-[22px]">water_drop</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-none">AquaCampus</span><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">Telemetry</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded-full"><span class="material-symbols-outlined text-primary text-[15px]">groups</span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-normal">~1,270</span></div><button aria-label="Menu and Profile Options" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile space-y-space-lg">
+<!-- Header Section -->
+<div class="flex flex-col pt-space-md space-y-space-sm">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-ping"></span>
+<span>Telemetry &amp; Modeling Reference • SYS-ID: AC-HYD-2024-V2.4</span>
+</div>
+<div class="flex flex-col space-y-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-bold">
+        Telemetry &amp; Baseline Architecture
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Formal engineering methodology, mathematical models, data privacy perimeters, and IoT sensor integration across university residential zones.
+      </p>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Cohort</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">1,270</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">residents</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">domain</span> 4 Quad Sectors
+        </span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Flow Rate / Cap</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">38.0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">L/cap/day</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> -6.2% vs avg
+        </span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Deterministic Base</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-primary-container font-semibold">48,200</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">L/day</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">balance</span> Normalized Load
+        </span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Standard Provenance</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">ISO 14046</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
+          ASHRAE 189.1 Protocol
+        </span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Mathematical Specification & Formula Breakdown -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1 h-5 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Mathematical Specification</h2>
+</div>
+<!-- Formula LaTeX-styled card -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold tracking-wide uppercase">Formula 1.1 • Aggregate Demand</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Continuous Metric</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Computes aggregate volume across residential nodes factoring simultaneous fixture discharge coefficients and diurnal occupancy variance:
+      </p>
+<!-- Code block -->
+<div class="p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface font-mono text-body-sm leading-relaxed overflow-x-auto shadow-inner">
+<div class="text-secondary-fixed-dim font-bold">// Aggregate Daily Facility Demand (L/day)</div>
+<div class="mt-1">
+<span class="text-secondary-container">Q<sub>day</sub></span> = Σ<sub>i=1..N</sub> [ 
+          <span class="text-tertiary-fixed-dim">P<sub>i</sub></span> × (
+          <span class="text-primary-fixed-dim">q<sub>base</sub></span> × 
+          <span class="text-secondary-fixed">θ<sub>i</sub></span>) + 
+          <span class="text-inverse-primary">Φ<sub>loss</sub></span>
+          ]
+        </div>
+<div class="mt-2 text-outline-variant font-label-sm text-label-sm">
+          Where P<sub>i</sub> = population, θ<sub>i</sub> = seasonality coefficient, Φ<sub>loss</sub> = unaccounted parasitic drift.
+        </div>
+</div>
+</div>
+<!-- Interactive Flow Rate Simulation Slider -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Simulate Fixture Restriction</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Interactive diurnal sensitivity model</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-title-sm text-title-sm font-bold" id="slider-rate-badge">
+          4.5 L/min
+        </span>
+</div>
+<div class="flex flex-col space-y-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>2.5 L/min (Ultra Low)</span>
+<span>10.0 L/min (Unrestricted)</span>
+</div>
+<input class="w-full h-2 rounded-lg bg-surface-container-highest accent-primary-container cursor-pointer" id="flow-slider" max="10.0" min="2.5" step="0.5" type="range" value="4.5"/>
+</div>
+<!-- Result readout block -->
+<div class="grid grid-cols-2 gap-space-sm p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Calculated Daily Baseline</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5" id="calc-baseline">48,200 L</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Delta vs Standard Quota</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5" id="calc-delta">-14.2%</span>
+</div>
+</div>
+</div>
+<!-- Benchmark Corridors Visual Bar -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex flex-col space-y-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Consumption Benchmark Corridors</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Campus per-capita daily volume compared to international conservation baselines.</span>
+</div>
+<!-- Visual stacked indicator -->
+<div class="space-y-space-sm">
+<!-- Campus Current -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">water_drop</span> AquaCampus Observed
+            </span>
+<span class="font-semibold text-primary">38.0 L/cap/day</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Target LEED Platinum -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>LEED Platinum Target</span>
+<span>24.0 L/cap/day</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-secondary-fixed-dim" style="width: 37%;"></div>
+</div>
+</div>
+<!-- National Blended -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>National Blended Academic Dorm</span>
+<span>42.0 L/cap/day</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-outline-variant" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Research Intensive Dorms -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>High-Intensity Wet-Lab Dorms</span>
+<span>55.0 L/cap/day</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-error" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Target Reduction Ratio Rule Card -->
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Target Reduction Ratio (TRR) Policy</span>
+<div class="p-space-md rounded-lg bg-surface-container font-mono text-body-sm text-on-surface">
+<span class="font-bold text-primary">TRR</span> = (Q<sub>actual</sub> - Q<sub>target</sub>) / Q<sub>baseline</sub>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Tier 1</span>
+<span class="font-title-sm text-title-sm font-bold text-primary block mt-0.5">≤ 0.0</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Optimal</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Tier 2</span>
+<span class="font-title-sm text-title-sm font-bold text-tertiary block mt-0.5">0.01-0.15</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Moderate</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Tier 3</span>
+<span class="font-title-sm text-title-sm font-bold text-error block mt-0.5">&gt; 0.15</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Critical</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Capabilities vs Privacy & Security Perimeters -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1 h-5 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">System Architecture Matrix</h2>
+</div>
+<!-- Mobile Segmented Control -->
+<div class="flex p-1 rounded-xl bg-surface-container-high" role="tablist">
+<button class="flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-btn-capabilities" onclick="switchTab('capabilities')">
+        Engine Capabilities
+      </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="tab-btn-privacy" onclick="switchTab('privacy')">
+        Privacy &amp; Security
+      </button>
+</div>
+<!-- Card Container for Capabilities -->
+<div class="flex flex-col space-y-space-sm" id="tab-panel-capabilities">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">pie_chart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Proportional Volumetric Allocation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Dynamic floor-by-floor apportionment isolates sub-quad anomalies without requiring invasive in-suite sub-metering fixtures.
+          </p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Diurnal Weight Adjusters</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Machine-learned rolling 14-day diurnal filters adjust for class schedule blocks, academic reading weeks, and holiday closures.
+          </p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Open Standard Compliance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Compliant with ASHRAE Guideline 14-2014 for measurement of water consumption and verification of water utility savings.
+          </p>
+</div>
+</div>
+</div>
+<!-- Card Container for Privacy & Security (Hidden by default) -->
+<div class="hidden flex flex-col space-y-space-sm" id="tab-panel-privacy">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Zero Identity Ingestion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            AquaCampus strictly avoids processing student IDs, room numbers, or resident biometric tokens. Telemetry binds purely to macro manifold nodes.
+          </p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">End-to-End Node Cryptography</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            LoRaWAN v1.1 telemetry packets signed with AES-128-GCM hardware roots before entering campus mesh infrastructure.
+          </p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">dns</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Building-Header Strictness</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Telemetry headers serialize solely with geo-quad descriptors (e.g., <code class="font-mono text-label-sm bg-surface-container px-1 py-0.5 rounded">QUAD_NORTH_MAIN</code>).
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: IoT Telemetry Hardware Roadmap (Phase 2 Blueprint) -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1 h-5 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">IoT Hardware Roadmap</h2>
+</div>
+<!-- Feasibility KPI Grid -->
+<div class="grid grid-cols-4 gap-space-xs p-space-md rounded-xl bg-surface-container-high text-center">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sensors</span>
+<span class="font-title-sm text-title-sm text-primary font-bold mt-0.5">18 Nodes</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Capex</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold mt-0.5">$14.2k</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Battery</span>
+<span class="font-title-sm text-title-sm text-secondary font-bold mt-0.5">5.5 Yrs</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rollout</span>
+<span class="font-title-sm text-title-sm text-primary font-bold mt-0.5">6 Wks</span>
+</div>
+</div>
+<!-- Milestone Roadmap Cards -->
+<div class="space-y-space-sm">
+<!-- Milestone 1 -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-bold flex items-center justify-center shrink-0">
+          1
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Ultrasonic Flow Clamp-Ons</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-bold">Q1 Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Non-invasive transit-time sonic sensors attached to copper DN50-DN150 distribution risers. Zero pipe cutting or system shutdowns required.
+          </p>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-bold flex items-center justify-center shrink-0">
+          2
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Cryptographic Gateways</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Q2 Scheduled</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Deployment of dual-band concentrators supporting AES-128 secure hardware handshakes over 915MHz LoRaWAN protocol.
+          </p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-bold flex items-center justify-center shrink-0">
+          3
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Edge Burst Detection</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Q3 Spec</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            On-device tinyML firmware evaluating derivative flow changes to flag catastrophic manifold burst events within 4 seconds.
+          </p>
+</div>
+</div>
+<!-- Milestone 4 -->
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-bold flex items-center justify-center shrink-0">
+          4
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Real-Time Influx Pipeline</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Q4 Spec</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Bi-directional InfluxDB continuous streaming connector exposing authenticated GraphQL and REST endpoints for campus researchers.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Open Academic Data & Schema -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1 h-5 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Academic Data &amp; Schema</h2>
+</div>
+<!-- JSON Preview Card with Copy Button -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span>sensor_payload_sample.json</span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface text-label-sm font-label-sm font-semibold shadow-sm transition-colors" id="copy-json-btn" onclick="copyJsonSnippet()">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-btn-label">Copy JSON</span>
+</button>
+</div>
+<pre class="p-space-md bg-inverse-surface text-inverse-on-surface font-mono text-body-sm leading-relaxed overflow-x-auto text-[13px]" id="json-code">{
+  "system_id": "AC-HYD-2024-V2.4",
+  "zone_id": "QUAD_NORTH_MAIN",
+  "timestamp_utc": "2024-10-24T08:14:30Z",
+  "telemetry": {
+    "flow_rate_lpm": 38.4,
+    "cumulative_daily_l": 48200.5,
+    "delta_to_baseline_pct": -6.2,
+    "hardware_state": "OPTIMAL_HEALTH",
+    "signal_snr_db": 11.2
+  },
+  "compliance": {
+    "ashrae_189_1_met": true,
+    "privacy_hash": "e3b0c44298fc1c149afbf4c8996fb924"
+  }
+}</pre>
+</div>
+<!-- Export & Download Actions -->
+<div class="flex flex-col space-y-space-xs">
+<button class="flex items-center justify-between p-space-md rounded-xl bg-primary-container text-on-primary hover:bg-primary transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]">table_view</span>
+<div class="flex flex-col text-left">
+<span class="font-title-sm text-title-sm font-semibold">Download Baseline Dataset</span>
+<span class="font-label-sm text-label-sm opacity-80">Full 30-Day Aggregated Data • .CSV (2.4 MB)</span>
+</div>
+</div>
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">data_object</span>
+<div class="flex flex-col text-left">
+<span class="font-title-sm text-title-sm font-semibold">JSON Schema Specification</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated OpenAPI • .JSON (120 KB)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">download</span>
+</button>
+<button class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">article</span>
+<div class="flex flex-col text-left">
+<span class="font-title-sm text-title-sm font-semibold">Engineering Whitepaper</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Full Peer-Reviewed Study • .PDF (4.8 MB)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">download</span>
+</button>
+</div>
+</div>
+<!-- Footnote -->
+<div class="flex items-center justify-center p-space-sm">
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center">
+      AquaCampus Research Group • Sustainable Infrastructure Initiative
+    </p>
+</div>
+</div>
+<!-- Inline JavaScript for Micro-Interactions -->
+<script>
+  // Tab Switching
+  function switchTab(tab) {
+    const capTab = document.getElementById('tab-btn-capabilities');
+    const privTab = document.getElementById('tab-btn-privacy');
+    const capPanel = document.getElementById('tab-panel-capabilities');
+    const privPanel = document.getElementById('tab-panel-privacy');
+
+    if (tab === 'capabilities') {
+      capTab.className = "flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm";
+      privTab.className = "flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface";
+      capPanel.classList.remove('hidden');
+      privPanel.classList.add('hidden');
+    } else {
+      privTab.className = "flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm";
+      capTab.className = "flex-1 py-2 px-space-sm rounded-lg font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface";
+      privPanel.classList.remove('hidden');
+      capPanel.classList.add('hidden');
+    }
+  }
+
+  // Flow Slider Interactive Simulation
+  const slider = document.getElementById('flow-slider');
+  const rateBadge = document.getElementById('slider-rate-badge');
+  const calcBaseline = document.getElementById('calc-baseline');
+  const calcDelta = document.getElementById('calc-delta');
+
+  if (slider) {
+    slider.addEventListener('input', function(e) {
+      const val = parseFloat(e.target.value);
+      rateBadge.textContent = val.toFixed(1) + ' L/min';
+
+      // Simulation algorithm: scale 48,200 baseline with flow rate relative to 4.5 baseline
+      const multiplier = val / 4.5;
+      const computedLiters = Math.round(48200 * multiplier);
+      const deltaPercent = (((val - 5.0) / 5.0) * 100).toFixed(1);
+
+      calcBaseline.textContent = computedLiters.toLocaleString() + ' L';
+      calcDelta.textContent = (deltaPercent > 0 ? '+' : '') + deltaPercent + '%';
+      
+      if (deltaPercent > 0) {
+        calcDelta.className = "font-headline-sm text-headline-sm text-tertiary font-bold mt-0.5";
+      } else {
+        calcDelta.className = "font-headline-sm text-headline-sm text-secondary font-bold mt-0.5";
+      }
+    });
+  }
+
+  // Copy JSON to clipboard
+  function copyJsonSnippet() {
+    const code = document.getElementById('json-code').innerText;
+    const label = document.getElementById('copy-btn-label');
+    
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code).then(() => {
+        label.textContent = "Copied!";
+        setTimeout(() => {
+          label.textContent = "Copy JSON";
+        }, 2000);
+      });
+    } else {
+      label.textContent = "Copied!";
+      setTimeout(() => {
+        label.textContent = "Copy JSON";
+      }, 2000);
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-title-sm"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="zones" href="#"><span class="material-symbols-outlined text-[24px]">domain</span><span class="font-label-sm text-label-sm mt-0.5">Zones</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="conservation" href="#"><span class="material-symbols-outlined text-[24px]">eco</span><span class="font-label-sm text-label-sm mt-0.5">Conservation</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-title-sm" data-path="telemetry" href="#"><span class="material-symbols-outlined text-[24px]">sensors</span><span class="font-label-sm text-label-sm mt-0.5">Telemetry</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-colors" data-path="more-menu" href="#"><span class="material-symbols-outlined text-[24px]">more_horiz</span><span class="font-label-sm text-label-sm mt-0.5">More</span></a></div></nav><script>
+(function(){
+  var m=location.pathname.indexOf('/m/')!==-1, base=m?'/m/':'/';
+  var map={overview:'',zones:'zones.html','zones-and-buildings':'zones.html',conservation:'conservation.html','conservation-analytics':'conservation.html',telemetry:'telemetry.html','telemetry-and-architecture':'telemetry.html','leak-telemetry':'telemetry.html'};
+  var hash={'#overview':'','#zones':'zones.html','#conservation':'conservation.html','#telemetry':'telemetry.html','#schemas':'telemetry.html'};
+  document.querySelectorAll('a').forEach(function(a){
+    var p=a.getAttribute('data-path'), h=a.getAttribute('href');
+    var t = (p in map)?map[p]:(h in hash?hash[h]:null);
+    if(t!==null && t!==undefined) a.setAttribute('href', base+t);
+  });
+  var h=document.querySelector('a[href="#"] img[alt*="Logo"]');
+})();
+</script>
+</body></html>
